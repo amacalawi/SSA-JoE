@@ -1,0 +1,103 @@
+/*
+| ------------
+| # Font Icons
+| ------------
+*/
+@font-face {
+    font-family: 'ssa-icon';
+    src:url('../fonts/ssa-icon.eot?yq9p4f');
+    src:url('../fonts/ssa-icon.eot?yq9p4f#iefix') format('embedded-opentype'),
+        url('../fonts/ssa-icon.ttf?yq9p4f') format('truetype'),
+        url('../fonts/ssa-icon.woff?yq9p4f') format('woff'),
+        url('../fonts/ssa-icon.svg?yq9p4f#ssa-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'ssa-icon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"], [class*=" icon-"],
+[class^="icon-"] *, [class*=" icon-"] * {
+    -webkit-transition: all 0.8s ease-in;
+        -o-transition: all 0.8s ease-in;
+        transition: all 0.8s ease-in;
+}
+.icon-services:before {
+    content: "\e900";
+}
+.icon-about-us:before {
+    content: "\e901";
+}
+.icon-training:before {
+    content: "\e902";
+}
+.icon-consulting:before {
+    content: "\e903";
+}
+.icon-twitter .path1:before {
+    content: "\e904";
+    color: rgb(255, 255, 255);
+}
+.icon-twitter .path2:before {
+    content: "\e905";
+    margin-left: -1.3779296875em;
+    color: rgb(75, 74, 75);
+}
+.icon-twitter:hover .path1:before {
+    color: #5ea9dd;
+}
+.icon-twitter:hover .path2:before {
+    color: #ffffff;
+}
+.icon-facebook .path1:before {
+    content: "\e906";
+    color: rgb(255, 255, 255);
+}
+.icon-facebook .path2:before {
+    content: "\e907";
+    margin-left: -1.3779296875em;
+    color: rgb(75, 74, 75);
+}
+.icon-facebook:hover .path1:before {
+    color: #3765a3;
+}
+.icon-facebook:hover .path2:before {
+    color: #ffffff;
+}
+.icon-mail .path1:before {
+    content: "\e908";
+    color: rgb(255, 255, 255);
+}
+.icon-mail .path2:before {
+    content: "\e909";
+    margin-left: -1.3779296875em;
+    color: rgb(75, 74, 75);
+}
+.icon-mail .path3:before {
+    content: "\e90a";
+    margin-left: -1.3779296875em;
+    color: rgb(75, 74, 75);
+}
+.icon-mail .path4:before {
+    content: "\e90b";
+    margin-left: -1.3779296875em;
+    color: rgb(75, 74, 75);
+}
+.icon-mail:hover .path1:before {
+    color: #fdbe3d;
+}
+.icon-mail:hover .path2:before,
+.icon-mail:hover .path3:before,
+.icon-mail:hover .path4:before {
+    color: #ffffff;
+}

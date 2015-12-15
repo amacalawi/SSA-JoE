@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Lato Light';
+    src: url('../fonts/lato-light-webfont.eot');
+    src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-light-webfont.woff2') format('woff2'),
+         url('../fonts/lato-light-webfont.woff') format('woff'),
+         url('../fonts/lato-light-webfont.ttf') format('truetype'),
+         url('../fonts/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#tinymce {
+    font-size: 16px;
+}
+#tinymce p,
+#tinymce li,
+#tinymce address,
+#tinymce label,
+#tinymce blockquote,
+#tinymce .wp-caption-dd {
+    font-family: "Lato Light", "Open Sans", "HelveticaNueu", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.9;
+}
+#tinymce .wp-caption-dd {
+    text-align: center;
+    font-size: 0.9em;
+}
+#tinymce h1,
+#tinymce h2,
+#tinymce h3,
+#tinymce h4,
+#tinymce h5,
+#tinymce h6 {
+    font-family: "Lato Bold", "Open Sans", Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.9;
+}
+#tinymce img {
+    max-width: 100%;
+    height: auto;
+}
