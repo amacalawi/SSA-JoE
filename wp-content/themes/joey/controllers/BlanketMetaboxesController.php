@@ -15,49 +15,31 @@ class BlanketMetaboxesController
     {
         global $post, $post_ID;
 
-        $slug = basename( get_permalink( $post->ID ) );
-        if( ( 'contact' == $slug || 'contact-us' == $slug ) ) {
-            # Map Metabox
-            add_action(
-                'edit_form_after_editor',
-                function($post)
-                {
-                    $value = get_post_meta($post->ID, 'blanket_contact', true);
-                    // view("metaboxes/information.metabox");
-                    include BLANKET_VIEWS . "metaboxes/information.metabox.php";
-                }
-            );
-        }
+        // $slug = basename( get_permalink( $post->ID ) );
+        // if( ( 'contact' == $slug || 'contact-us' == $slug ) ) {
+        //     # Map Metabox
+        //     add_action(
+        //         'edit_form_after_editor',
+        //         function($post)
+        //         {
+        //             $value = get_post_meta($post->ID, 'blanket_contact', true);
+        //             // view("metaboxes/information.metabox");
+        //             include BLANKET_VIEWS . "metaboxes/information.metabox.php";
+        //         }
+        //     );
+        // }
 
-        // All page except the front_page
-        if( 'page' === $post->post_type && $post_ID !== (int) get_option( 'page_on_front' ) )
+        # All page except the front_page
+        if( 'post' === $post->post_type && $post_ID !== (int) get_option( 'page_on_front' ) )
         {
-            add_meta_box(
-                'blanket_background_img_metabox', // ID
-                'Background Image', // name
-                function ($post)
-                {
-
-                    // remove_meta_box( 'postimagediv','page','side' );
-                    $blanket_background_img = get_post_meta($post->ID, 'blanket_background_img', true);
-                    include BLANKET_VIEWS . "metaboxes/backgroundimg.metabox.php";
-
-                }, // callback function
-                'page', // the post_type this meta box is associated with
-                'side',
-                'core'
-            );
-
             add_action(
                 'edit_form_after_editor',
                 function($post)
                 {
-                    $blanket_jumbotron = get_post_meta($post->ID, 'blanket_jumbotron', true);
-                    $sections = get_post_meta($post->ID, 'blanket_content_section', true);
-                    include BLANKET_VIEWS . "metaboxes/jumbotron.metabox.php";
+                    $sections = get_post_meta($post_ID, 'blanket_sections', true);
+                    include BLANKET_VIEWS . "metaboxes/sections.metabox.php";
                 }
             );
-
         }
 
     }

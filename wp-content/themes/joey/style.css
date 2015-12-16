@@ -307,29 +307,36 @@ section.testimonial .col-sm-6 .msg {
 
 
 /* experience css start */
-section.exp-banner .col-sm-6 {
+section.exp-banner .col-sm-6,
+section.experience-banner .col-sm-6 {
     margin-top:160px;
 }
 @media(min-width: 1600px) and (max-width: 1920px) {
-  section.exp-banner {
+  section.exp-banner,
+  section.experience-banner {
     min-height: 768px;
   }
-  section.exp-banner .col-sm-6 {
+  section.exp-banner .col-sm-6,
+  section.experience-banner .col-sm-6 {
     margin-top: 200px;
   }
 }
 @media(min-width: 768px) and (max-width: 1366px) {
-  section.exp-banner {
+  section.exp-banner,
+  section.experience-banner {
     min-height: 100vh;
   }
 }
-section.exp-banner {
+section.exp-banner,
+section.experience-banner {
   width: 100%;
   background: url(../images/exp-banner.png) no-repeat;
   background-size: cover;
   background-position: center center;
 }
-
+section[class*="phase"] {
+  min-height: 508px;
+}
 section.phase2,
 section.phase4 {
   background: #f5f4f1;

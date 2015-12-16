@@ -42,7 +42,7 @@ if( have_posts() ):
 
         } else {
 
-            get_template_part( 'content', $post->post_type );
+            get_template_part( $post->post_name );
 
         }
 

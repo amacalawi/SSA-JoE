@@ -3,5 +3,5 @@
 <head><?php
     wp_head(); ?>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"><?php
+<body id="<?php echo $post->post_name; ?>"><?php
     get_template_part("navigation") ?>

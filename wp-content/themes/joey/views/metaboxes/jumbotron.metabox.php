@@ -10,6 +10,12 @@
         <div>
             <div class="form-group">
                 <div>
+                    <strong>Title</strong>
+                </div>
+                <input type="text" name="blanket_jumbotron[title]" class="wide" value="<?php echo @$blanket_jumbotron['title'] ?>" placeholder="<?php echo @$post->post_title ?>">
+            </div>
+            <div class="form-group">
+                <div>
                     <strong>Heading</strong>
                 </div>
                 <input type="text" name="blanket_jumbotron[heading]" class="wide" value="<?php echo @$blanket_jumbotron['heading'] ?>">

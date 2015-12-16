@@ -30,12 +30,6 @@ class BlanketBootstrapCarouselController
                     $carousels = get_post_meta($post->ID, 'blanket_bootstrap_carousel', true);
                     include BLANKET_VIEWS . "metaboxes/carousel.metabox.php";
 
-                    // $bb_call_to_action = get_post_meta($post->ID, 'blanket_bootstrap_call_to_action', true);
-                    // require( BLANKET_INCLUDES . 'icon-data.php' );
-                    // $icons = blanket_icon_fonts();//The array
-                    // $display_fa_icons = blanket_generate_fa_icons($icons, 'icon-big');
-                    // include BLANKET_VIEWS . "metaboxes/call-to-action.metabox.php";
-
                     $sections = get_post_meta($post->ID, 'blanket_sections', true);
                     include BLANKET_VIEWS . "metaboxes/sections.metabox.php";
                 }
@@ -72,11 +66,6 @@ class BlanketBootstrapCarouselController
             }
         }
 
-        if( isset($_POST["blanket_sections"]) ) {
-            foreach ($_POST["blanket_sections"] as $key) {
-                update_post_meta($post_id, "blanket_sections", $_POST["blanket_sections"]);
-            }
-        }
     }
 }
  ?>
