@@ -1,0 +1,644 @@
+/*
+ | --------------------------------------------
+ | # JoE's Theme Stylesheet
+ | --------------------------------------------
+ | # main color: #fdbe3d - gold;
+ | # comp color: #ffffff - white;
+ | # text color: #4a4a4a - grayish;
+ |
+ | # Gallery Section: #e3e4df - grayish green;
+ | # Events Section: #ebebeb - grayish gray;
+ | # Contact Section: #343434 - charcoal gray;
+ */
+
+.page {
+    min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'dosis-reg';
+  src: url('fonts/Dosis-Regular.otf');
+}
+@font-face {
+  font-family: 'dosis-bold';
+  src: url('fonts/Dosis-Bold.otf');
+}
+html,
+body {
+  height:100%;
+}
+body {
+  font-family: 'dosis-reg';
+  color: #3f3f3f;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'dosis-bold';
+  color: #3f3f3f;
+}
+section {
+  padding: 90px 0px;
+  position: relative !important;
+}
+.dosis-reg {
+  font-family: 'dosis-reg';
+}
+.dosis-bold {
+  font-family: 'dosis-bold';
+}
+.bg-light {
+  background: #fafafa;
+}
+.wcolor {
+  color: #fff;
+}
+.theme-color {
+  color: #800080;
+}
+.bcolor {
+  color: #000;
+}
+p,
+li,
+a,
+span{
+  font-family: 'dosis-reg';
+  color: #3f3f3f;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.nsize {
+  font-size: 18px;
+}
+
+/* header css start */
+header {
+  border-bottom: 4px solid #800080;
+  border-width: 0 0 4px !important;
+  background: rgba(255,255,255,0.8);
+}
+header .navbar-nav>li>a {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media {
+  header .navbar-right {
+    margin-top: 52px;
+    margin-bottom: -21px;
+  }
+}
+header .navbar-nav>li.active {
+  border-bottom: 12px solid #ffbf3d;
+}
+header .navbar-nav>li.active a {
+  color: #800080;
+}
+header .nav>li>a:focus,
+header .nav>li>a:hover {
+  background: transparent;
+  color: #800080;
+  transition: .2s all ease-in-out;
+}
+header img{
+  max-width: 80%;
+}
+.navbar-fixed-top {
+  z-index: 99999999999;
+}
+/* header css end */
+
+/* top slider css start */
+
+section.top-slider li .col-sm-6{
+  margin-top:240px;
+}
+@media(min-width: 768px) and (max-width: 1366px) {
+  section.top-slider,
+  section.top-slider li {
+    min-height: 100vh;
+  }
+}
+@media(min-width: 1600px) and (max-width: 1920px) {
+  section.top-slider,
+  section.top-slider li {
+    min-height: 768px;
+  }
+  section.top-slider li .col-sm-6 {
+    margin-top:300px;
+  }
+}
+section.top-slider {
+  padding: 0;
+  width: 100%;
+}
+section.top-slider img {
+  position: absolute;
+  left:0;
+  top:0;
+}
+section.top-slider .flex-direction-nav,
+section.top-slider .flex-control-nav {
+  display: none;
+}
+section.top-slider ul {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+section.top-slider li strong {
+  font-size: 120%;
+}
+section.top-slider li {
+  width: 100%;
+}
+section.top-slider li:nth-child(1){
+  background: url(images/slide1.png) no-repeat;
+  background-size: cover;
+}
+section.top-slider li:nth-child(2){
+  background: url(images/slide2.png) no-repeat;
+  background-size: cover;
+}
+section.top-slider .flexslider {
+  position: relative;
+}
+
+/* top slider css end */
+
+
+/* journey section css start */
+section.journey img {
+  max-width: 100%;
+}
+section.journey h1.title {
+  margin-top: 120px;
+}
+/* journey section css end */
+
+
+/* stars section css start */
+section.stars {
+  background: url(images/stars-bg.jpg);
+  background-attachment: fixed;
+}
+/* stars section css end */
+
+/* student section css start */
+section.student .col-sm-6:nth-child(1) h1 {
+  position: absolute;
+  left: 25px;
+}
+section.student .col-sm-6:nth-child(2) h1 {
+  position: absolute;
+  right: 25px;
+}
+section.student img {
+  margin-top: 30px;
+  max-width: 60%;
+}
+/* student section css end */
+
+
+/* photo-gallery section css start */
+section.photo-gallery {
+  background: #ffbf3d;
+}
+section.photo-gallery #owl-demo {
+  margin-top: 30px;
+}
+section.photo-gallery p{
+  margin-bottom: 30px;
+}
+section.photo-gallery .owl-pagination{
+  display: none;
+}
+section.photo-gallery .owl-buttons {
+  margin-top: 30px;
+}
+#owl-demo .owl-item div{
+  padding:5px;
+}
+#owl-demo .owl-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+section.photo-gallery .owl-theme .owl-controls .owl-buttons div{
+  background: #ffca5f;
+  color: #3f3f3f;
+  opacity: 1;
+  padding: 7px 15px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+section.photo-gallery .owl-theme .owl-controls .owl-buttons div {
+  border-radius: 4px;
+}
+section.photo-gallery .owl-theme .owl-prev {
+  margin-right: 20px;
+}
+/* photo-gallery section css end */
+
+
+/* testimonial section css start */
+section.testimonial {
+  background: #fff;
+}
+section.testimonial #owl-demo {
+  margin-top: 30px;
+}
+section.testimonial p{
+  text-align: center;
+  margin-bottom: 30px;
+}
+section.testimonial #owl-demo .owl-item div{
+  padding:5px;
+}
+
+section.testimonial .owl-theme .owl-controls .owl-buttons div{
+  display: none;
+}
+section.testimonial .owl-theme .owl-controls .owl-page span{
+  background: #ffbf3d;
+  height:20px;
+  width: 20px;
+}
+section.testimonial .owl-theme .owl-controls .owl-page.active span {
+  width: 24px;
+  height: 24px;
+}
+section.testimonial .owl-pagination {
+  margin-top: 20px;
+}
+section.testimonial .col-sm-6 .avatar {
+  max-width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+section.testimonial .col-sm-6 .msg {
+  background: #800080;
+  display: inline;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+/* testimonial section css end */
+
+
+
+
+
+
+
+
+
+
+
+
+/* experience css start */
+section.exp-banner .col-sm-6,
+section.experience-banner .col-sm-6 {
+    margin-top:160px;
+}
+@media(min-width: 1600px) and (max-width: 1920px) {
+  section.exp-banner,
+  section.experience-banner {
+    min-height: 768px;
+  }
+  section.exp-banner .col-sm-6,
+  section.experience-banner .col-sm-6 {
+    margin-top: 200px;
+  }
+}
+@media(min-width: 768px) and (max-width: 1366px) {
+  section.exp-banner,
+  section.experience-banner {
+    min-height: 100vh;
+  }
+}
+section.exp-banner,
+section.experience-banner {
+  width: 100%;
+  background: url(../images/exp-banner.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section[class*="phase"] {
+  min-height: 508px;
+}
+section.phase2,
+section.phase4 {
+  background: #f5f4f1;
+}
+section.phase1 img,
+section.phase2 img,
+section.phase3 img,
+section.phase4 img {
+  max-width: 100%;
+}
+section.phase1 h1.title,
+section.phase2 h1.title,
+section.phase3 h1.title,
+section.phase4 h1.title {
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+section.phase1 h1.title {
+  color: #f9c126;
+}
+section.phase2 h1.title {
+  color: #2653ce;
+}
+section.phase3 h1.title {
+  color: #f92661;
+}
+section.phase4 h1.title {
+  color: #2653ce;
+}
+/* experience section css end */
+
+
+/* about section css start */
+section.about-banner .col-sm-6 {
+    margin-top: 200px;
+}
+section.about-banner h2{
+    margin-top: -10px;
+}
+@media(min-width: 1600px) and (max-width: 1920px) {
+  section.about-banner {
+    min-height: 768px;
+  }
+  section.about-banner .col-sm-6 {
+    margin-top: 250px;
+  }
+}
+@media(min-width: 768px) and (max-width: 1366px) {
+  section.about-banner {
+    min-height: 100vh;
+  }
+}
+section.about-banner {
+  width: 100%;
+  background: url(images/about-banner.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.about-phase1 img {
+  max-width: 100%;
+}
+@media(min-width: 768px) {
+  section.about-phase1 h1.title{
+    margin-top: 90px;
+  }
+  section.about-phase1 h1,
+  section.about-phase1 p {
+    padding-left: 30px;
+  }
+}
+#about section.stars h1 strong {
+  font-size: 110%;
+}
+#about section.stars h1{
+  font-size: 30px;
+}
+
+/* about section css end */
+
+
+
+
+/* programmes section css start */
+section.programmes-banner .col-sm-8 {
+    margin-top: 100px;
+}
+section.programmes-banner h2{
+    margin-top: -10px;
+}
+@media(min-width: 1600px) and (max-width: 1920px) {
+  section.programmes-banner {
+    min-height: 768px;
+  }
+  section.programmes-banner .col-sm-8 {
+    margin-top: 140px;
+  }
+}
+@media(min-width: 768px) and (max-width: 1366px) {
+  section.programmes-banner {
+    min-height: 100vh;
+  }
+}
+section.programmes-banner {
+  width: 100%;
+  background: url(../images/programmes-banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+section.programme-phase h1.title {
+  color: #f9c126;
+}
+#programmes .nav-tabs>li.active>a,
+#programmes .nav-tabs>li.active>a:focus,
+#programmes .nav-tabs>li.active>a:hover {
+  background: #5d095d;
+  border: 1px solid #5d095d;
+  border-radius: 15px;
+  transition: .1s all ease-in-out;
+}
+#programmes .nav-tabs>li>a {
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 30px;
+  transition: .2s all ease-in-out;
+  margin-right: 0;
+}
+#programmes .nav-tabs>li>a:hover {
+  background: transparent;
+  border: 1px solid transparent;
+}
+#programmes .nav-tabs {
+  border: 1px solid transparent;
+  background: #823c82;
+  display: inline-block;
+  border-radius: 15px;
+}
+#programmes .tab-content .col-sm-4 {
+  margin-top: 40px;
+}
+#programmes .tab-content .col-sm-4 ul {
+  padding-left: 20px;
+  text-align: left;
+}
+#programmes .tab-content .col-sm-4 .btn {
+  padding: 8px 30px;
+  width: 70%;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  border-radius: 20px;
+  background: #f9c126;
+  border: 1px solid #f9c126;
+}
+/* programmes section css end */
+
+
+/* contact-us section css start */
+section.contact-us-banner {
+  padding: 0;
+}
+section.contact-us-banner .right,
+section.contact-us-banner .left {
+  min-height: 100vh;
+  width: 50%;
+  position: absolute;
+  top: 0;
+}
+section.contact-us-banner .right {
+  left: 50%;
+}
+section.contact-us-banner .right-layer{
+  height: 100vh;
+}
+section.contact-us-banner .col-sm-6:nth-child(2) {
+  z-index: 99999;
+}
+section.contact-us-banner h1.title,
+section.contact-us-banner form  {
+  margin-top: 250px;
+}
+#map {
+  width: 100%;
+  height: 100vh;
+}
+.map-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255,190,61,0.85);
+  background: -moz-linear-gradient(left, rgba(255,190,61,0.85) 0%, rgba(116,0,116,0.85) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,190,61,0.85)), color-stop(100%, rgba(116,0,116,0.85)));
+  background: -webkit-linear-gradient(left, rgba(255,190,61,0.85) 0%, rgba(116,0,116,0.85) 100%);
+  background: -o-linear-gradient(left, rgba(255,190,61,0.85) 0%, rgba(116,0,116,0.85) 100%);
+  background: -ms-linear-gradient(left, rgba(255,190,61,0.85) 0%, rgba(116,0,116,0.85) 100%);
+  background: linear-gradient(to right, rgba(255,190,61,0.85) 0%, rgba(116,0,116,0.85) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbe3d', endColorstr='#740074', GradientType=1 );
+  z-index: 99;
+}
+section.contact-us-banner .form-control{
+  background: #fff;
+  font-size: 20px;
+  color: #333;
+  border: 1px solid #fff;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+@media(min-width: 768px) {
+  .pad-right-zero {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1920px) {
+  section.contact-us-banner .right,
+  section.contact-us-banner .left,
+  #map,
+  section.contact-us-banner .right-layer,
+  .map-overlay  {
+     height: 768px;
+  }
+  section.contact-us-banner h1.title,
+  section.contact-us-banner form  {
+    margin-top: 280px;
+  }
+}
+section.contact-us-banner .btn-default {
+  background: #740074;
+  border: 1px solid #740074;
+  padding: 12px 40px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 8px;
+}
+section.contact-us-banner .btn-yellow {
+  background: #ffbf3d;
+  border: 1px solid #ffbf3d;
+  padding: 12px 40px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 0;
+  position: absolute;
+  left: 75%;
+  margin-left: -77.5px;
+  bottom: 0;
+  z-index: 99999;
+}
+section.contact-us-banner p.wcolor {
+  margin-top: 5px;
+}
+section.contact-us-banner .dosis-reg i{
+  width: 24px;
+  height: 24px;
+}
+section.contact-us-banner .social {
+  margin-left: 20px;
+}
+/* contact-us section css end */
+
+
+/* footer section css start */
+footer{
+  padding: 30px 0 0px 0;
+  background: #272727;
+}
+footer *{
+  color: #eaeaea;
+}
+footer a,
+footer p {
+  font-size: 16px;
+}
+footer a:hover {
+  color: #ffbf3d;
+  transition: .2s all ease-in-out;
+}
+footer strong{
+  font-size: 140%;
+}
+footer .btn i{
+  margin-top: -20px;
+  background: #eaeaea;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: #272727;
+  margin-right: -10px;
+  margin-left: -10px;
+  line-height: 32px;
+}
+footer .row-bottom {
+  margin-top: 35px;
+  background: #1b1b1b;
+  padding: 10px 0 5px 0;
+}
+footer .row-bottom .col-xs-6{
+  padding: 0;
+  line-height: 32px;
+}
+footer .copyright {
+  margin-top: 5px;
+  font-size: 16px;
+}
+/* footer section css end */
