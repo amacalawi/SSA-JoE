@@ -2,9 +2,7 @@
     <h3 class="panel-title"><?php _e("Options", PMS_TEXT_DOMAIN); ?></h3>
     <div class="panel-body">
         <div>
-            <strong>Display in </strong><?php
-            wp_dropdown_pages(); ?>
-            <span>or use shortcode: <strong>[<?php echo PhotoController::$cpt_shortcode; ?> id="<?php echo $post->ID ?>"]</strong></span>
+            <span>Use shortcode: <strong>[<?php echo PhotoController::$cpt_shortcode; ?> id="<?php echo $post->ID ?>"]</strong></span>
         </div>
         <div>
             <strong>Items to display per slide: </strong>

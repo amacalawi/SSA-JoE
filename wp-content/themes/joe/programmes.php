@@ -1,48 +1,41 @@
-<?php $heading = get_post_meta($post->ID, 'blanket_heading', true);
-
-# Check if page
-switch ($post->post_name) {
-    case 'programme':
-    case 'programmes':
-        $colstyle= 'col-sm-offset-2 col-sm-8 text-center';
-        break;
-
-    case 'about':
-    default:
-        $colstyle = 'col-sm-offset-6 col-sm-6';
-        break;
-} ?>
-<section class="<?php echo $post->post_name ?>-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)">
+<?php $heading = get_post_meta($post->ID, 'blanket_heading', true); ?>
+<section class="programmes-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)">
     <div class="container">
-        <div class="<?php echo $colstyle ?>">
-            <h1 class="title theme-color"><?php echo(empty($heading) ? get_the_title() : $heading['heading']) ?></h1>
+        <div class="col-sm-offset-2 col-sm-8 text-center">
+            <h1 class="title theme-color text-uppercase"><?php the_title() ?></h1>
             <?php if($heading['subheading']): ?><h1><?php echo $heading['subheading'] ?></h1><?php endif; ?>
-            <?php if($heading['content']){ ?>
-                <h2 class="desc dosis-reg"><?php echo $heading['content'] ?></h2>
-            <?php } else { ?>
-                <p><?php the_content(); ?></p>
+            <?php if($heading['content']) { ?>
+            <p><?php echo $heading['content'] ?></p>
             <?php }; ?>
         </div>
     </div>
-</section><?php
+</section>
 
+<?php the_content() ?>
+
+<?php
 
 $sections = get_post_meta($post->ID, 'blanket_sections', true);
-foreach ($sections as $section) { ?>
+foreach ($sections as $section) {
+    if( !empty($section['image']) && !empty($section['heading']) && !empty($section['subheading']) && !empty($section['section_class']) ): ?>
     <section class="<?php echo $section['section_class'] ? $section['section_class'] : 'stars' ?>" <?php if($section['section_class']=='stars'&& !empty($section['image'])) echo "style='background-image: url(".$section['image'].");'" ?>>
         <div class="container">
             <?php if($section['image'] && $section['section_class'] != 'stars'): ?>
-            <div class="col-sm-offset-1 col-sm-5 text-center">
+            <div class="col-sm-offset-1 col-sm-10">
                 <img src="<?php echo $section['image'] ?>"/>
             </div>
             <?php endif; ?>
-            <div class="<?php echo (($section['image'] && $section['section_class'] != 'stars')?'col-sm-5':'col-sm-offset-1 col-sm-10 text-center wcolor dosis-reg') ?>">
-                <?php if($section['heading']): ?><h1 class="title theme-color"><?php echo $section['heading'] ?></h1><?php endif; ?>
-                <?php echo do_shortcode( wpautop($section['content']) ) ?>
+            <div class="<?php echo (($section['image'] && $section['section_class'] != 'stars')?'col-sm-5':'col-sm-offset-1 col-sm-10 text-center') ?>">
+                <?php if($section['heading']): ?><h1 class="title theme-color text-center"><?php echo $section['heading'] ?></h1><?php endif; ?>
+                <?php echo $section['content'] ?>
             </div><div class="clearfix"></div>
         </div>
     </section> <?php
-} ?>
+    endif;
+}
+
+ ?>
+
 
 <?php
 $parts =get_post_meta($post->ID, 'blanket_parts', true);

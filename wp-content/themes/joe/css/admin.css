@@ -117,7 +117,6 @@ span.handletoggle:active {
 .blanket_options .panel-body {
     padding: 15px;
 }
-
 .blanket-panel:not(:last-child) {
     margin-bottom: 3em !important;
 }
@@ -292,7 +291,12 @@ span.handletoggle:active {
     width: 100%;
     border: none;
 }
-
+.blanket-panel .panel-body > .panel-title {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 0;
+    margin-top: 0;
+}
 /*
 | ----------
 | # Sections

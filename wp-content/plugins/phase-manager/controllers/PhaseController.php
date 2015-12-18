@@ -1,11 +1,11 @@
 <?php
 
 
-class PhotoController
+class PhaseController
 {
-    public static $cpt_name_singular = 'gallery';
-    public static $cpt_name_plural = 'galleries';
-    public static $cpt_shortcode = 'photogal';
+    public static $cpt_name_singular = 'phase';
+    public static $cpt_name_plural = 'phases';
+    public static $cpt_shortcode = 'phase';
 
     public function register()
     {
@@ -31,9 +31,9 @@ class PhotoController
         $args = array(
             'labels'            => $labels,
             'query_var'         => $cpt_name_singular,
-            'taxonomies'        => array('category'),
-            'rewrite'           => array('with_front' => false),
-            'menu_icon'         => 'dashicons-images-alt',
+            'taxonomies'        => array(),
+            'rewrite'           => array('slug'=>'programmes/phase', 'with_front' => true),
+            'menu_icon'         => 'dashicons-screenoptions',
             'public'            => true,
             'hierarchical'      => true,
             'supports'          => array('title', 'thumbnail', 'editor'),
@@ -67,6 +67,25 @@ class PhotoController
     public function taxonomies() {
         $taxonomies = array();
 
+        $taxonomies['phasems_phases_categories'] = array(
+            'hierarchical' => true,
+            'query_var'    => true,
+            'rewrite'      => true,
+            'show_in_nav_menus' => false,
+            'labels'       => array(
+                'name'              => 'Phase Categories',
+                'singular_name'     => 'Phase Category',
+                'menu_name'         => 'Phase Categories',
+                'all_items'         => 'All Phase Categories',
+                'edit_item'         => 'Edit Phase Category',
+                'view_item'         => 'View Phase Category',
+                'update_item'       => 'Update Phase Category',
+                'add_new_item'      => 'Add New Phase Category',
+                'new_item_name'     => 'New Phase Category Name',
+                'search_items'      => 'Search Phase Categories'
+            )
+        );
+
         foreach($taxonomies as $name => $args) {
             register_taxonomy($name, array(self::$cpt_name_singular), $args);
         }
@@ -84,58 +103,31 @@ class PhotoController
             'edit_form_after_title',
             function($post)
             {
-                $pms_photo_options = get_post_meta($post->ID, "pms_photo_options", true);
-                include PMS_PLUGIN_VIEW . "partials/nonce.view.php";
-                include PMS_PLUGIN_VIEW . "metaboxes/options.metabox.php";
+                $phasems_heading = get_post_meta($post->ID, "phasems_heading", true);
+                include PhaseMS_PLUGIN_VIEW . "partials/nonce.view.php";
+                include PhaseMS_PLUGIN_VIEW . "metaboxes/options.metabox.php";
             }
         );
 
-        add_action(
-            'edit_form_after_editor',
-            function($post)
-            {
-                $pms_photos = get_post_meta($post->ID, "pms_photos", true);
-                include PMS_PLUGIN_VIEW . "partials/nonce.view.php";
-                include PMS_PLUGIN_VIEW . "metaboxes/carousel.metabox.php";
-            }
-        );
-
-        // add_meta_box(
-        //     'ems_departments-container', // CSS class
-        //     'Department', // name
-        //     function()
+        // add_action(
+        //     'edit_form_after_editor',
+        //     function($post)
         //     {
-        //         global $post;
-        //         //Get taxonomy and terms
-        //         $taxonomy = 'ems_departments';
-
-        //         //Set up the taxonomy object and get terms
-        //         $tax = get_taxonomy($taxonomy);
-        //         $terms = get_terms($taxonomy,array('hide_empty' => 0));
-
-        //         //Name of the form
-        //         $name = 'tax_input[' . $taxonomy . ']';
-
-        //         //Get current and popular terms
-        //         $popular = get_terms( $taxonomy, array( 'orderby' => 'count', 'order' => 'DESC', 'number' => 10, 'hierarchical' => false ) );
-        //         $postterms = get_the_terms( $post->ID,$taxonomy );
-        //         $current = ($postterms ? array_pop($postterms) : false);
-        //         $current = ($current ? $current->term_id : 0);
-        //         include EMS_PLUGIN_VIEW . 'metaboxes/departments.metabox.view.php';
-        //     }, // callback function
-        //     self::$cpt_name_singular, // the post_type this meta box is associated with
-        //     'side','core'
+        //         $phasems_photos = get_post_meta($post->ID, "phasems_photos", true);
+        //         include PhaseMS_PLUGIN_VIEW . "partials/nonce.view.php";
+        //         include PhaseMS_PLUGIN_VIEW . "metaboxes/carousel.metabox.php";
+        //     }
         // );
     }
 
     public function save($post_id)
     {
 
-        if(!isset( $_POST['pms_metabox_nonce'] )) {
+        if(!isset( $_POST['phasems_metabox_nonce'] )) {
             return;
         }
         # Verify that the nonce is valid.
-        if ( !wp_verify_nonce( $_POST['pms_metabox_nonce'], 'save_metaboxes' ) ) {
+        if ( !wp_verify_nonce( $_POST['phasems_metabox_nonce'], 'save_metaboxes' ) ) {
             return;
         }
         # If this is an autosave, our form has not been submitted, so we don't want to do anything.
@@ -150,17 +142,11 @@ class PhotoController
         }
 
         # SAVE
-        if( isset($_POST["pms_photos"]) ) {
-            foreach ($_POST["pms_photos"] as $key)
-            {
-                update_post_meta($post_id, "pms_photos", $_POST["pms_photos"]);
-            }
-        }
 
-        if( isset($_POST["pms_photo_options"]) ) {
-            foreach ($_POST["pms_photo_options"] as $key)
+        if( isset($_POST["phasems_heading"]) ) {
+            foreach ($_POST["phasems_heading"] as $key)
             {
-                update_post_meta($post_id, "pms_photo_options", $_POST["pms_photo_options"]);
+                update_post_meta($post_id, "phasems_heading", $_POST["phasems_heading"]);
             }
         }
 
@@ -173,13 +159,14 @@ class PhotoController
             'id' => $post->ID
         ), $atts );
 
-        $photogal = get_post( $a['id'] );
-        $pms_photos = get_post_meta($photogal->ID, 'pms_photos', true);
-        $pms_photo_options = get_post_meta($photogal->ID, 'pms_photo_options', true);
-        $i = $pms_photo_options['per_item'] ? $pms_photo_options['per_item'] : 1;
+        $args = array(
+            'post_type' => PhaseController::$cpt_name_singular,
+            'post_status' => 'publish',
+            'posts_per_page' => -1
+        );
+        $phases = get_posts( $args );
 
-        setup_postdata($photogal);
-        include PMS_PLUGIN_VIEW . "content/gallery.page.php";
+        include PhaseMS_PLUGIN_VIEW . "content/phase.page.php";
 
         wp_reset_postdata();
     }

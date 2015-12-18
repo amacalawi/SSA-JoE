@@ -34,12 +34,19 @@ get_header(); ?>
 
                 } else {
 
-                    /*
-                     * Include the Post-Format-specific template for the content.
-                     * If you want to override this in a child theme, then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
-                    get_template_part( 'views/templates/partials/content', 'page' );
+                    if( locate_template( [$post->post_name.'.php'] ) ) {
+
+                        get_template_part($post->post_name);
+
+                    } else {
+                        /*
+                         * Include the Post-Format-specific template for the content.
+                         * If you want to override this in a child theme, then include a file
+                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                         */
+                        get_template_part( 'views/templates/partials/content', 'page' );
+                    }
+
 
                 }
 

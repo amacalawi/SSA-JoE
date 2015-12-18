@@ -35,6 +35,16 @@ class BlanketMetaboxesController
                     include BLANKET_VIEWS . "metaboxes/parts.metabox.php";
                 }
             );
+
+            add_action(
+                'edit_form_after_title',
+                function($post)
+                {
+
+                    $blanket_heading = get_post_meta($post->ID, 'blanket_heading', true);
+                    include BLANKET_VIEWS . "metaboxes/heading.metabox.php";
+                }
+            );
         }
 
     }
@@ -88,6 +98,12 @@ class BlanketMetaboxesController
         if( isset($_POST["blanket_parts"]) ) {
             foreach ($_POST["blanket_parts"] as $key) {
                 update_post_meta($post_id, "blanket_parts", $_POST["blanket_parts"]);
+            }
+        }
+
+        if( isset($_POST["blanket_heading"]) ) {
+            foreach ($_POST["blanket_heading"] as $key) {
+                update_post_meta($post_id, "blanket_heading", $_POST["blanket_heading"]);
             }
         }
     }

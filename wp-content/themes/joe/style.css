@@ -44,7 +44,7 @@ section {
   padding: 90px 0px;
   position: relative !important;
 }
-.dosis-reg {
+.dosis-reg, .dosis-reg h1, .dosis-reg p {
   font-family: 'dosis-reg';
 }
 .dosis-bold {
@@ -53,7 +53,7 @@ section {
 .bg-light {
   background: #fafafa;
 }
-.wcolor {
+.wcolor, .wcolor h1, .wcolor h2, .wcolor h3, .wcolor h4, .wcolor h5, .wcolor h6, .wcolor p {
   color: #fff;
 }
 .theme-color {
