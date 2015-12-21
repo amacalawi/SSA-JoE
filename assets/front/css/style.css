@@ -1,3 +1,20 @@
+/*
+ | --------------------------------------------
+ | # JoE's Theme Stylesheet
+ | --------------------------------------------
+ | # main color: #fdbe3d - gold;
+ | # comp color: #ffffff - white;
+ | # text color: #4a4a4a - grayish;
+ |
+ | # Gallery Section: #e3e4df - grayish green;
+ | # Events Section: #ebebeb - grayish gray;
+ | # Contact Section: #343434 - charcoal gray;
+ */
+
+.page {
+    min-height: 100vh;
+}
+
 @font-face {
   font-family: 'dosis-reg';
   src: url('../fonts/Dosis-Regular.otf');
@@ -6,7 +23,7 @@
   font-family: 'dosis-bold';
   src: url('../fonts/Dosis-Bold.otf');
 }
-html, 
+html,
 body {
   height:100%;
 }
@@ -27,7 +44,7 @@ section {
   padding: 90px 0px;
   position: relative !important;
 }
-.dosis-reg {
+.dosis-reg, .dosis-reg h1, .dosis-reg p {
   font-family: 'dosis-reg';
 }
 .dosis-bold {
@@ -36,7 +53,14 @@ section {
 .bg-light {
   background: #fafafa;
 }
-.wcolor {
+.wcolor, 
+.wcolor h1, 
+.wcolor h2, 
+.wcolor h3, 
+.wcolor h4, 
+.wcolor h5, 
+.wcolor h6, 
+.wcolor p {
   color: #fff;
 }
 .theme-color {
@@ -69,22 +93,26 @@ header .navbar-nav>li>a {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 12px 20px;
 }
-@media {
+@media (min-width: 768px){
   header .navbar-right {
     margin-top: 52px;
-    margin-bottom: -21px;
+    margin-bottom: -26px;
+  }
+  header .navbar-nav>li {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin: 5px 5px;
   }
 }
 header .navbar-nav>li.active {
-  border-bottom: 12px solid #ffbf3d;
+  border-bottom: 20px solid #ffbf3d;
 }
-header .navbar-nav>li.active a{
+header .navbar-nav>li.active a {
   color: #800080;
 }
-header .nav>li>a:focus, 
+header .nav>li>a:focus,
 header .nav>li>a:hover {
   background: transparent;
   color: #800080;
@@ -96,6 +124,15 @@ header img{
 .navbar-fixed-top {
   z-index: 99999999999;
 }
+
+header .navbar-nav>li:last-child > a{
+  background: #800080;
+  color: #fff;
+  border-radius: 4px;
+  min-width: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 /* header css end */
 
 /* top slider css start */
@@ -103,14 +140,14 @@ header img{
 section.top-slider li .col-sm-6{
   margin-top:240px;
 }
-@media(min-width: 768px) and (max-width: 1366px) { 
-  section.top-slider, 
+@media(min-width: 768px) and (max-width: 1366px) {
+  section.top-slider,
   section.top-slider li {
     min-height: 100vh;
-  }  
+  }
 }
-@media(min-width: 1600px) and (max-width: 1920px) { 
-  section.top-slider, 
+@media(min-width: 1600px) and (max-width: 1920px) {
+  section.top-slider,
   section.top-slider li {
     min-height: 768px;
   }
@@ -145,11 +182,11 @@ section.top-slider li {
   width: 100%;
 }
 section.top-slider li:nth-child(1){
-  background: url(../images/slide1.png) no-repeat;
+  background: url(images/slide1.png) no-repeat;
   background-size: cover;
 }
 section.top-slider li:nth-child(2){
-  background: url(../images/slide2.png) no-repeat;
+  background: url(images/slide2.png) no-repeat;
   background-size: cover;
 }
 section.top-slider .flexslider {
@@ -171,7 +208,7 @@ section.journey h1.title {
 
 /* stars section css start */
 section.stars {
-  background: url(../images/stars-bg.jpg);
+  background: url(images/stars-bg.jpg);
   background-attachment: fixed;
 }
 /* stars section css end */
@@ -290,32 +327,39 @@ section.testimonial .col-sm-6 .msg {
 
 
 /* experience css start */
-section.exp-banner .col-sm-6 {
+section.exp-banner .col-sm-6,
+section.experience-banner .col-sm-6 {
     margin-top:160px;
 }
-@media(min-width: 1600px) and (max-width: 1920px) { 
-  section.exp-banner {
+@media(min-width: 1600px) and (max-width: 1920px) {
+  section.exp-banner,
+  section.experience-banner {
     min-height: 768px;
   }
-  section.exp-banner .col-sm-6 {
+  section.exp-banner .col-sm-6,
+  section.experience-banner .col-sm-6 {
     margin-top: 200px;
   }
 }
-@media(min-width: 768px) and (max-width: 1366px) { 
-  section.exp-banner {
+@media(min-width: 768px) and (max-width: 1366px) {
+  section.exp-banner,
+  section.experience-banner {
     min-height: 100vh;
   }
 }
-section.exp-banner {
+section.exp-banner,
+section.experience-banner {
   width: 100%;
   background: url(../images/exp-banner.png) no-repeat;
   background-size: cover;
   background-position: center center;
 }
-
+section[class*="phase"] {
+  min-height: 508px;
+}
 section.phase2,
 section.phase4 {
-  background: #f5f4f1; 
+  background: #f5f4f1;
 }
 section.phase1 img,
 section.phase2 img,
@@ -352,7 +396,7 @@ section.about-banner .col-sm-6 {
 section.about-banner h2{
     margin-top: -10px;
 }
-@media(min-width: 1600px) and (max-width: 1920px) { 
+@media(min-width: 1600px) and (max-width: 1920px) {
   section.about-banner {
     min-height: 768px;
   }
@@ -360,14 +404,14 @@ section.about-banner h2{
     margin-top: 250px;
   }
 }
-@media(min-width: 768px) and (max-width: 1366px) { 
+@media(min-width: 768px) and (max-width: 1366px) {
   section.about-banner {
     min-height: 100vh;
   }
 }
 section.about-banner {
   width: 100%;
-  background: url(../images/about-banner.png) no-repeat;
+  background: url(images/about-banner.png) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -402,7 +446,7 @@ section.programmes-banner .col-sm-8 {
 section.programmes-banner h2{
     margin-top: -10px;
 }
-@media(min-width: 1600px) and (max-width: 1920px) { 
+@media(min-width: 1600px) and (max-width: 1920px) {
   section.programmes-banner {
     min-height: 768px;
   }
@@ -410,7 +454,7 @@ section.programmes-banner h2{
     margin-top: 140px;
   }
 }
-@media(min-width: 768px) and (max-width: 1366px) { 
+@media(min-width: 768px) and (max-width: 1366px) {
   section.programmes-banner {
     min-height: 100vh;
   }
@@ -424,8 +468,8 @@ section.programmes-banner {
 section.programme-phase h1.title {
   color: #f9c126;
 }
-#programmes .nav-tabs>li.active>a, 
-#programmes .nav-tabs>li.active>a:focus, 
+#programmes .nav-tabs>li.active>a,
+#programmes .nav-tabs>li.active>a:focus,
 #programmes .nav-tabs>li.active>a:hover {
   background: #5d095d;
   border: 1px solid #5d095d;
@@ -529,7 +573,7 @@ section.contact-us-banner .form-control{
 }
 @media (min-width: 1367px) and (max-width: 1920px) {
   section.contact-us-banner .right,
-  section.contact-us-banner .left, 
+  section.contact-us-banner .left,
   #map,
   section.contact-us-banner .right-layer,
   .map-overlay  {
@@ -574,12 +618,10 @@ section.contact-us-banner .social {
 /* contact-us section css end */
 
 
-
-
 /* footer section css start */
 footer{
   padding: 30px 0 0px 0;
-  background: #272727;  
+  background: #272727;
 }
 footer *{
   color: #eaeaea;
@@ -620,3 +662,88 @@ footer .copyright {
   font-size: 16px;
 }
 /* footer section css end */
+
+
+
+/* centre section css start */
+section.centre-banner h1.title,
+section.centre-banner h4 {
+  margin-top: 100px;
+}
+section.centre-banner {
+  min-height: 100px;
+}
+section.centre-banner h4 {
+  color: #777;
+}
+section.centre-banner i {
+  margin-left: 15px;
+  color: #777;
+}
+section.centre-banner a:hover i {
+  color: #333;
+}
+section.centre-banner select,
+section.centre-banner select:focus {
+  display: inline-block;
+  max-width: 220px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background: #ffbf3d;
+  border: 1px solid #ffbf3d;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+section.centre-banner select option {
+  background: #ffbf3d;
+  border: 1px solid #ffbf3d;
+}
+#centre .enrol-content .col-sm-6 .box {
+  padding: 30px 30px 25px 30px;
+  margin-top: 40px;
+  border-radius: 8px;
+}
+#centre .enrol-content .col-sm-6 .violet {
+  background: #800080;
+}
+#centre .enrol-content .col-sm-6 .yellow {
+  background: #e5a92f;
+}
+#centre .enrol-content .col-sm-6 .violet button {
+  background: #e5a92f;
+  border: 1px solid #e5a92f;
+  font-weight: bold;
+  border-radius: 4px;
+  min-width: 100px;
+  font-size: 17px;
+  font-style: 'dosis-bold';
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+}
+#centre .enrol-content .col-sm-6 .yellow button {
+  background: #800080;
+  border: 1px solid #800080;
+  font-weight: bold;
+  border-radius: 4px;
+  min-width: 100px;
+  font-size: 17px;
+    font-style: 'dosis-bold';
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+}
+#centre .enrol-content .col-sm-6 p {
+  color: #fff;
+  clear: both;
+  display: block;
+  font-size: 17px;
+}
+#centre .enrol-content .col-sm-6 p strong {
+  width: 90px;
+  float: left;
+}
+/* centre section css end */
