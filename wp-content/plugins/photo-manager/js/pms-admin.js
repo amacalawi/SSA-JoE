@@ -41,7 +41,21 @@ jQuery(document).ready(function($) {
     $('.button-add.carousel').click(function(){
         var $key = $('.carousel .carousel-item').length;
         var $_item = $('#main-carousel');
-        $_item.append('<div id="carousel_item_'+$key+'" class="carousel-item"><div class="input-group"><button data-target="#carousel_item_'+$key+'" type="button" class="pull-right button-destroy carousel button button-default button-large"><i class="fa fa-times"></i></button></div><img id="pms_photos_image_'+$key+'" role="button" class="button-media" data-target="#pms_photos_image_'+$key+'" data-input="#pms_photos_image_input_'+$key+'" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="300" height="225"><input id="pms_photos_image_input_'+$key+'" type="hidden" name="pms_photos[carousel]['+$key+'][image]"></div></div>');
+        $_item.append(
+            '<div id="carousel_item_'+$key+'" class="carousel-item">'
+                + '<div class="input-group">'
+                    + '<button data-target="#carousel_item_'+$key+'" type="button" class="pull-right button-destroy carousel button button-default button-large"><i class="fa fa-times"></i></button>'
+                + '</div>'
+                + '<img id="pms_photos_image_'+$key+'" role="button" class="button-media" data-target="#pms_photos_image_'+$key+'" data-input="#pms_photos_image_input_'+$key+'" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="300" height="225">'
+                + '<input id="pms_photos_image_input_'+$key+'" type="hidden" name="pms_photos[carousel]['+$key+'][image]">'
+            + '<div class="input-group form-group">'
+                + '<strong>Heading</strong><br>'
+                + '<input type="text" name="pms_photos[carousel]['+$key+'][heading]" ><br>'
+                + '<strong>Subheading</strong><br>'
+                + '<input type="text" name="pms_photos[carousel]['+$key+'][subheading]" >'
+            + '</div>'
+            +'</div>'
+            + '</div>');
     });
     $(document).on('click', '.button-destroy.carousel', function(){
         var _target = $(this).data("target");

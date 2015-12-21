@@ -85,3 +85,23 @@ function save_extra_category_fileds( $term_id ) {
         update_option( "category_$t_id", $cat_meta );
     }
 }
+
+
+add_filter('post_link', 'brand_permalink', 1, 3);
+add_filter('post_type_link', 'brand_permalink', 1, 3);
+
+function brand_permalink($permalink, $post_id, $leavename) {
+    //con %brand% catturo il rewrite del Custom Post Type
+    if (strpos($permalink, '%phase_categories%') === FALSE) return $permalink;
+        // Get post
+        $post = get_post($post_id);
+        if (!$post) return $permalink;
+
+        // Get taxonomy terms
+        $terms = wp_get_object_terms($post->ID, 'phasems_phases_categories');
+        if (!is_wp_error($terms) && !empty($terms) && is_object($terms[1]))
+            $taxonomy_slug = $terms[1]->slug;
+        else $taxonomy_slug = 'no-phase_categories';
+
+    return str_replace('%phase_categories%', $taxonomy_slug, $permalink);
+}

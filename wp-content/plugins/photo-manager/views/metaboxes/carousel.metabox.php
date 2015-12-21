@@ -8,6 +8,12 @@
                 </div>
                 <img id="pms_photos_image_0" role="button" class="button-media" data-target="#pms_photos_image_0" data-input="#pms_photos_image_input_0" src="<?php echo @$pms_photos['carousel'][0]['image'] ?>" width="300" height="225">
                 <input id="pms_photos_image_input_0" type="hidden" name="pms_photos[carousel][0][image]" value="<?php echo @$pms_photos['carousel'][0]['image'] ?>">
+                <div class="input-group form-group">
+                    <strong>Heading</strong><br>
+                    <input type="text" name="pms_photos[carousel][0][heading]" value="<?php echo @$pms_photos['carousel'][0]['heading'] ?>"><br>
+                    <strong>Subheading</strong><br>
+                    <input type="text" name="pms_photos[carousel][0][subheading]" value="<?php echo @$pms_photos['carousel'][0]['subheading'] ?>">
+                </div>
             </div><?php
 
             if( (is_array($pms_photos) && array_key_exists('carousel', $pms_photos)) || !empty($pms_photos['carousel']) ) {
@@ -19,6 +25,12 @@
                         </div>
                         <img id="pms_photos_image_<?php echo $key ?>" role="button" class="button-media" data-target="#pms_photos_image_<?php echo $key ?>" data-input="#pms_photos_image_input_<?php echo $key ?>" src="<?php echo $value['image'] ?>" width="300" height="225">
                         <input id="pms_photos_image_input_<?php echo $key ?>" type="hidden" name="pms_photos[carousel][<?php echo $key ?>][image]" value="<?php echo $value['image'] ?>">
+                        <div class="input-group form-group">
+                            <strong>Heading</strong><br>
+                            <input type="text" name="pms_photos[carousel][<?php echo $key ?>][heading]" value="<?php echo @$pms_photos['carousel'][ $key ]['heading'] ?>"><br>
+                            <strong>Subheading</strong><br>
+                            <input type="text" name="pms_photos[carousel][<?php echo $key ?>][subheading]" value="<?php echo @$pms_photos['carousel'][ $key ]['subheading'] ?>">
+                        </div>
                     </div><?php
                     endif;
                 }
