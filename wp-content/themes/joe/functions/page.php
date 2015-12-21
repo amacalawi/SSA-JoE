@@ -83,9 +83,9 @@ function blanket_menus() {
     # Main Menu
     register_nav_menu('main-menu-link', __( 'Main Menu Link' ));
     # Language Menu
-    register_nav_menu('language-menu', __( 'Language Menu' ));
+    register_nav_menu('footer-menu', __( 'Footer Menu' ));
     # Social Menu
-    register_nav_menu('social-media-menu', __( 'Social Media Menu' ));
+    // register_nav_menu('social-media-menu', __( 'Social Media Menu' ));
 }
 
 /*
@@ -228,28 +228,28 @@ function the_contact_info($id=null)
         if( null == $id ) $id = $post->ID;
 
         $blanket_contact = get_post_meta( $id, "blanket_contact", true ); ?>
-        <div itemscope itemtype="http://schema.org/Organization">
+        <h4 itemscope itemtype="http://schema.org/Organization">
             <div itemprop="name"><strong><?php echo value($blanket_contact['company']); ?></strong></div>
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <span itemprop="streetAddress">
+                <div itemprop="streetAddress">
                     <span class="unit"><?php echo value($blanket_contact['unit'], "", ", "); ?></span>
                     <span class="street"><?php echo value($blanket_contact['street'], "", ", "); ?></span>
-                </span><br>
-                <span itemprop="addressLocality">
+                </div>
+                <div itemprop="addressLocality">
                     <span class="brgy"><?php echo value($blanket_contact['brgy'], "", ", "); ?></span>
                     <span class="city"><?php echo value($blanket_contact['city'], "", ", "); ?></span>
-                </span><br>
-                <span itemprop="addressRegion">
+                </div>
+                <div itemprop="addressRegion">
                     <span class="province"><?php echo value($blanket_contact['province'], "", ", "); ?></span>
-                </span><br>
-                <span itemprop="postalCode">
+                </div>
+                <div itemprop="postalCode">
                     <span class="zip"><?php echo value($blanket_contact['zip'], "", ", "); ?></span>
-                </span><br>
-                <span itemprop="addressCountry">
+                </div>
+                <div itemprop="addressCountry">
                     <span class="country"><?php echo value($blanket_contact['country']); ?></span>
-                </span><br>
+                </div>
             </div>
-        </div><?php
+        </h4><?php
     }
 
     echo ob_get_clean();

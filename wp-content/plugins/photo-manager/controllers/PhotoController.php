@@ -36,7 +36,7 @@ class PhotoController
             'menu_icon'         => 'dashicons-images-alt',
             'public'            => true,
             'hierarchical'      => true,
-            'supports'          => array('title', 'thumbnail', 'editor'),
+            'supports'          => array('title', 'editor'),
             'show_ui'           => true,
             'show_in_menu'      => true,
             // 'menu_position'     => 7,

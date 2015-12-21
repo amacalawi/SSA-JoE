@@ -15,7 +15,7 @@ switch ($post->post_name) {
 <section class="<?php echo $post->post_name ?>-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)">
     <div class="container">
         <div class="<?php echo $colstyle ?>">
-            <h1 class="title theme-color"><?php echo(empty($heading) ? get_the_title() : $heading['heading']) ?></h1>
+            <h1 class="title theme-color"><?php echo(empty($heading['heading']) ? get_the_title() : $heading['heading']) ?></h1>
             <?php if($heading['subheading']): ?><h1><?php echo $heading['subheading'] ?></h1><?php endif; ?>
             <?php if($heading['content']){ ?>
                 <h2 class="desc dosis-reg"><?php echo $heading['content'] ?></h2>
@@ -28,6 +28,8 @@ switch ($post->post_name) {
 
 
 $sections = get_post_meta($post->ID, 'blanket_sections', true);
+
+if( $sections[0]['image'] && $sections[0]['heading'] && $sections[0]['content'] && $sections[0]['section_class'] ) {
 foreach ($sections as $section) { ?>
     <section class="<?php echo $section['section_class'] ? $section['section_class'] : 'stars' ?>" <?php if($section['section_class']=='stars'&& !empty($section['image'])) echo "style='background-image: url(".$section['image'].");'" ?>>
         <div class="container">
@@ -42,7 +44,8 @@ foreach ($sections as $section) { ?>
             </div><div class="clearfix"></div>
         </div>
     </section> <?php
-} ?>
+}
+} //endif; ?>
 
 <?php
 $parts =get_post_meta($post->ID, 'blanket_parts', true);
