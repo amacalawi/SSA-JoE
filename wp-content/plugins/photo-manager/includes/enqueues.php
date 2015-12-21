@@ -23,4 +23,11 @@ function pms_scripts_collection() {
         wp_enqueue_script( 'pms-jquery-ui', PMS_PLUGIN_VENDOR . 'jquery/jquery-ui.min.js', array('jquery'), '1.14', true );
     }
 }
+
+// add_action('wp_footer', 'photogal_scripts_collection');
+// function photogal_scripts_collection(){
+//     wp_enqueue_script( 'photogal', PMS_PLUGIN_JS . 'photogal.js', array('jquery', 'owl-carousel'), '1.0.0', true );
+
+// }
+
  ?>

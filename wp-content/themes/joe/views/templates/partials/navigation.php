@@ -14,7 +14,7 @@
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="main-menu-collapse-container"><?php
+                <div class="collapse navbar-collapse <?php echo(is_single()?'is-single':''); ?>" id="main-menu-collapse-container"><?php
                     $theme_location = 'main-menu';
                     if( has_nav_menu($theme_location) )
                     {

@@ -5,21 +5,22 @@
             <p class="col-sm-offset-3 col-sm-6 text-center"><?php echo $photogal->post_content ?></p>
         </div><div class="clearfix"></div>
         <div class="col-sm-offset-1 col-sm-10">
-            <div id="gallery-slider" class="owl-carousel"><?php
+            <div id="gallery-slider-<?php echo $photogal->ID ?>" class="photogal owl-carousel"><?php
 
-                $i = 0;
-                foreach ($pms_photos['carousel'] as $carousel) {
-                    if($i%3 == 0) {
-                        echo $i > 0 ? "</div>" : ""; // close div if it's not the first
-                        echo "<div class='item'>";
-                    } ?>
-                    <div class="col-sm-4">
-                        <img src="<?php echo $carousel['image'] ?>"/>
+                foreach ($pms_photos['carousel'] as $key => $carousel) { ?>
+                    <div class='item'>
+                        <div class=" image-selector" data-src="<?php echo $carousel['image'] ?>" data-sub-html="#ligh-box-caption-<?php echo $key ?>">
+                            <div class="image-container">
+                                <img src="<?php echo $carousel['image'] ?>" >
+                                <div id="ligh-box-caption-<?php echo $key ?>" class="hidden ligh-box-caption">
+                                    <?php if($carousel['heading']): ?><h4><?php echo $carousel['heading'] ?></h4><?php endif; ?>
+                                    <?php if($carousel['subheading']): ?><p><?php echo $carousel['subheading'] ?></p><?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
                     </div> <?php
-                    $i++; ?>
-                    <?php
                 } ?>
-                </div> <div class="clearfix"></div><!-- close last container div -->
+                <div class="clearfix"></div>
 
             </div>
         </div>

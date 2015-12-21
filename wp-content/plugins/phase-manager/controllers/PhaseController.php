@@ -32,7 +32,7 @@ class PhaseController
             'labels'            => $labels,
             'query_var'         => $cpt_name_singular,
             'taxonomies'        => array(),
-            'rewrite'           => array('slug'=>'programmes/phase', 'with_front' => true),
+            'rewrite'           => array('slug'=>'programmes/phases', 'with_front'=>true),
             'menu_icon'         => 'dashicons-screenoptions',
             'public'            => true,
             'hierarchical'      => true,
@@ -41,10 +41,10 @@ class PhaseController
             'show_in_menu'      => true,
             // 'menu_position'     => 7,
             'show_in_nav_menus' => false,
-            'publicly_queryable'=> false,
-            'exclude_from_search' => true,
-            'has_archive'       => false,
-            'can_export'        => false,
+            'publicly_queryable'=> true,
+            'exclude_from_search' => false,
+            'has_archive'       => true,
+            'can_export'        => true,
             'capability_type'   => 'post',
             'capabilities' => array(
                 'create_posts' => true, // Toggles support for the "Add New" function
@@ -70,8 +70,8 @@ class PhaseController
         $taxonomies['phasems_phases_categories'] = array(
             'hierarchical' => true,
             'query_var'    => true,
-            'rewrite'      => true,
-            'show_in_nav_menus' => false,
+            'rewrite'      => true, //array('slug'=>'/', 'with_front' => false),
+            'show_in_nav_menus' => true,
             'labels'       => array(
                 'name'              => 'Phase Categories',
                 'singular_name'     => 'Phase Category',
@@ -99,15 +99,15 @@ class PhaseController
      */
     public function metaboxes()
     {
-        add_action(
-            'edit_form_after_title',
-            function($post)
-            {
-                $phasems_heading = get_post_meta($post->ID, "phasems_heading", true);
-                include PhaseMS_PLUGIN_VIEW . "partials/nonce.view.php";
-                include PhaseMS_PLUGIN_VIEW . "metaboxes/options.metabox.php";
-            }
-        );
+        // add_action(
+        //     'edit_form_after_title',
+        //     function($post)
+        //     {
+        //         $phasems_heading = get_post_meta($post->ID, "phasems_heading", true);
+        //         include PhaseMS_PLUGIN_VIEW . "partials/nonce.view.php";
+        //         include PhaseMS_PLUGIN_VIEW . "metaboxes/options.metabox.php";
+        //     }
+        // );
 
         // add_action(
         //     'edit_form_after_editor',

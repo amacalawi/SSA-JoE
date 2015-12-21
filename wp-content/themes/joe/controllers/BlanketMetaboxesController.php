@@ -7,22 +7,21 @@ class BlanketMetaboxesController
     {
         global $post, $post_ID;
 
-        // $slug = basename( get_permalink( $post->ID ) );
-        // if( ( 'contact' == $slug || 'contact-us' == $slug ) ) {
-        //     # Map Metabox
-        //     add_action(
-        //         'edit_form_after_editor',
-        //         function($post)
-        //         {
-        //             $value = get_post_meta($post->ID, 'blanket_contact', true);
-        //             // view("metaboxes/information.metabox");
-        //             include BLANKET_VIEWS . "metaboxes/information.metabox.php";
-        //         }
-        //     );
-        // }
+        $slug = basename( get_permalink( $post->ID ) );
+        if( ( 'contact' == $slug || 'contact-us' == $slug ) ) {
+            # Map Metabox
+            add_action(
+                'edit_form_after_editor',
+                function($post)
+                {
+                    $value = get_post_meta($post->ID, 'blanket_contact', true);
+                    include BLANKET_VIEWS . "metaboxes/information.metabox.php";
+                }
+            );
+        }
 
         # All page except the front_page
-        if( 'page' === $post->post_type )
+        if( 'page' === $post->post_type && ('contact' != $slug && 'contact-us' != $slug) )
         {
             add_action(
                 'edit_form_after_editor',

@@ -8,7 +8,6 @@ $categories= get_terms(
     array( 'parent' => $parent->term_id )
 ); ?>
 
-
 <section class="programme-phase">
     <div class="container">
         <div class="col-sm-offset-1 col-sm-10">
@@ -31,10 +30,7 @@ $categories= get_terms(
             <div class="text-center">
                 <ul class="nav nav-tabs" role="tablist">
                 <?php
-                foreach ($categories as $key => $category) {
-                    //then i get the data from the database
-                    $cat_data = get_option("category_".$category->term_id);
-                    ?>
+                foreach ($categories as $key => $category) { ?>
 
                     <li role="presentation" class="<?php echo(0==$key?'active':'') ?>">
                         <a href=".<?php echo $category->slug ?>" aria-controls="<?php echo $category->slug ?>" role="tab" data-toggle="tab">
@@ -62,16 +58,25 @@ $categories= get_terms(
                             $args = array(
                                 'post_type' => PhaseController::$cpt_name_singular,
                                 'post_status' => 'publish',
-                                'category' => $category->term_id
+                                'order' => 'ASC',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'phasems_phases_categories',
+                                        'field' => 'id',
+                                        'terms' => $category->term_id, // Where term_id of Term 1 is "1".
+                                        'include_children' => false
+                                    )
+                                )
                             );
                             $phases = get_posts( $args );
 
                             foreach ($phases as $key => $phase) { ?>
                                 <div class="col-sm-4 text-center">
-                                    <img class="img-circle" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $phase->ID ) ) ?>"/>
+                                    <img width="220" height="220" class="img-circle" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $phase->ID ) ) ?>"/>
                                     <h3 class="text-uppercase theme-color">
                                         <?php echo $phase->post_title ?>
                                     </h3>
+                                    <?php echo wpautop( substr($phase->post_content, 0, 150) . "..." ); ?>
                                     <!-- <ul>
                                         <li>dolor ganar takar wereya sitanss sasa s</li>
                                         <li>dolor ganar takar wereya sitan</li>
