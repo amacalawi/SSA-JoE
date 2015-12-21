@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
+-- Generation Time: Dec 21, 2015 at 08:07 AM
+=======
 -- Generation Time: Dec 21, 2015 at 07:32 AM
+>>>>>>> master
 -- Server version: 5.6.25
 -- PHP Version: 5.5.27
 
@@ -23,6 +27,8 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
 -- Table structure for table `joe_commentmeta`
 --
 
@@ -271,6 +277,7 @@ INSERT INTO `joe_options` (`option_id`, `option_name`, `option_value`, `autoload
 -- --------------------------------------------------------
 
 --
+>>>>>>> master
 -- Table structure for table `joe_postmeta`
 --
 
@@ -885,6 +892,8 @@ INSERT INTO `joe_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `des
 (24, 24, 'phasems_phases_categories', '', 19, 1),
 (25, 25, 'nav_menu', '', 0, 3);
 
+<<<<<<< HEAD
+=======
 -- --------------------------------------------------------
 
 --
@@ -955,11 +964,14 @@ CREATE TABLE IF NOT EXISTS `joe_users` (
 INSERT INTO `joe_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'admin', '$P$B8gLF4smedYTtC3sNw77NfO7FkSu7V0', 'admin', 'john@ssagroup.com', '', '2015-12-16 04:38:57', '', 0, 'admin');
 
+>>>>>>> master
 --
 -- Indexes for dumped tables
 --
 
 --
+<<<<<<< HEAD
+=======
 -- Indexes for table `joe_commentmeta`
 --
 ALTER TABLE `joe_commentmeta`
@@ -993,6 +1005,7 @@ ALTER TABLE `joe_options`
   ADD UNIQUE KEY `option_name` (`option_name`);
 
 --
+>>>>>>> master
 -- Indexes for table `joe_postmeta`
 --
 ALTER TABLE `joe_postmeta`
@@ -1042,6 +1055,8 @@ ALTER TABLE `joe_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
+<<<<<<< HEAD
+=======
 -- Indexes for table `joe_usermeta`
 --
 ALTER TABLE `joe_usermeta`
@@ -1058,10 +1073,13 @@ ALTER TABLE `joe_users`
   ADD KEY `user_nicename` (`user_nicename`);
 
 --
+>>>>>>> master
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+<<<<<<< HEAD
+=======
 -- AUTO_INCREMENT for table `joe_commentmeta`
 --
 ALTER TABLE `joe_commentmeta`
@@ -1082,6 +1100,7 @@ ALTER TABLE `joe_links`
 ALTER TABLE `joe_options`
   MODIFY `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=451;
 --
+>>>>>>> master
 -- AUTO_INCREMENT for table `joe_postmeta`
 --
 ALTER TABLE `joe_postmeta`
@@ -1106,6 +1125,8 @@ ALTER TABLE `joe_terms`
 --
 ALTER TABLE `joe_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+<<<<<<< HEAD
+=======
 --
 -- AUTO_INCREMENT for table `joe_usermeta`
 --
@@ -1116,6 +1137,7 @@ ALTER TABLE `joe_usermeta`
 --
 ALTER TABLE `joe_users`
   MODIFY `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+>>>>>>> master
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
