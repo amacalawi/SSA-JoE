@@ -53,23 +53,5 @@
             <input name="blanket_contact[map][lat]" class="half" type="text" id="blanket_contact[map][lat]" placeholder="latitude" value="<?php echo esc_html(@$value['map']['lat']); ?>">
         </div>
 
-        <hr class="separator">
-
-        <p><strong><?php _e("Social", BLANKET_TEXT_DOMAIN) ?></strong></p>
-        <div class="flex-container">
-            <div class="flex-item">
-                <label for="blanket_contact[social][facebook]">Facebook</label>
-                <input name="blanket_contact[social][facebook]" class="wide" type="text" id="blanket_contact[social][facebook]" placeholder="facebook" value="<?php echo esc_html(@$value['social']['facebook']); ?>">
-            </div>
-            <div class="flex-item">
-                <label for="blanket_contact[social][twitter]">Twitter</label>
-                <input name="blanket_contact[social][twitter]" class="wide" type="text" id="blanket_contact[social][twitter]" placeholder="twitter" value="<?php echo esc_html(@$value['social']['twitter']); ?>">
-            </div>
-            <div class="flex-item">
-                <label for="blanket_contact[social][site]">Another Website</label>
-                <input name="blanket_contact[social][site]" class="wide" type="text" id="blanket_contact[social][site]" placeholder="site..." value="<?php echo esc_html(@$value['social']['site']); ?>">
-            </div>
-        </div>
-
     </div>
 </div>
