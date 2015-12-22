@@ -33,7 +33,7 @@ class TestimonialController
             'query_var'         => $cpt_name_singular,
             'taxonomies'        => array('category'),
             'rewrite'           => array('with_front' => false),
-            'menu_icon'         => 'dashicons-admin-comments',
+            'menu_icon'         => 'dashicons-format-chat',
             'public'            => true,
             'hierarchical'      => true,
             'supports'          => array('title', 'thumbnail', 'editor'),

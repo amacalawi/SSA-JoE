@@ -1,6 +1,5 @@
 <?php
-$blanket_options = get_option('blanket_theme_options');
-$blanket_contact = get_post_meta( $id, "blanket_contact", true ); ?>
+$blanket_options = get_option('blanket_theme_options'); ?>
     <footer>
         <div class="container">
             <div class="row">
@@ -77,17 +76,17 @@ $blanket_contact = get_post_meta( $id, "blanket_contact", true ); ?>
                 <div class="col-xs-6 pad-right-zero">
                     <ul class="list-inline social-icons pull-right">
                         <li>
-                            <a target="_blank" href="<?php echo $blanket_contact['social']['facebook'] ?>" class="btn">
+                            <a target="_blank" href="<?php echo $blanket_options['social']['facebook'] ?>" class="btn">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="<?php echo $blanket_contact['social']['twitter'] ?>" class="btn">
+                            <a target="_blank" href="<?php echo $blanket_options['social']['twitter'] ?>" class="btn">
                                 <i class="fa fa-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="<?php echo $blanket_contact['social']['site'] ?>" class="btn">
+                            <a target="_blank" href="<?php echo $blanket_options['social']['linkedin'] ?>" class="btn">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </li>

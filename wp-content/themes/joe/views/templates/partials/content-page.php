@@ -1,5 +1,4 @@
 <?php $heading = get_post_meta($post->ID, 'blanket_heading', true);
-
 # Check if page
 switch ($post->post_name) {
     case 'programme':
@@ -15,7 +14,7 @@ switch ($post->post_name) {
 <section class="<?php echo $post->post_name ?>-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)">
     <div class="container">
         <div class="<?php echo $colstyle ?>">
-            <h1 class="title theme-color"><?php echo(empty($heading['heading']) ? get_the_title() : $heading['heading']) ?></h1>
+            <?php if($heading['heading']): ?><h1 class="title theme-color"><?php echo $heading['heading'] ?></h1><?php endif; ?>
             <?php if($heading['subheading']): ?><h1><?php echo $heading['subheading'] ?></h1><?php endif; ?>
             <?php if($heading['content']){ ?>
                 <h2 class="desc dosis-reg"><?php echo $heading['content'] ?></h2>
@@ -24,7 +23,16 @@ switch ($post->post_name) {
             <?php }; ?>
         </div>
     </div>
-</section><?php
+</section>
+<?php if(empty($heading['heading'])): ?>
+<div class="container">
+    <div class="col-sm-12">
+        <h1 class="title"><?php the_title(); ?></h1><?php
+        the_content(); ?>
+    </div>
+</div><?php
+endif; ?>
+<?php
 
 
 $sections = get_post_meta($post->ID, 'blanket_sections', true);
@@ -35,7 +43,7 @@ foreach ($sections as $section) { ?>
         <div class="container">
             <?php if($section['image'] && $section['section_class'] != 'stars'): ?>
             <div class="col-sm-offset-1 col-sm-5 text-center">
-                <img src="<?php echo $section['image'] ?>"/>
+                <img src="<?php echo $section['image'] ?>" class="hides" />
             </div>
             <?php endif; ?>
             <div class="<?php echo (($section['image'] && $section['section_class'] != 'stars')?'col-sm-5':'col-sm-offset-1 col-sm-10 text-center wcolor dosis-reg') ?>">
