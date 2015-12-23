@@ -41,7 +41,7 @@ class TestimonialController
             'show_in_menu'      => true,
             // 'menu_position'     => 7,
             'show_in_nav_menus' => false,
-            'publicly_queryable'=> false,
+            'publicly_queryable'=> true,
             'exclude_from_search' => true,
             'has_archive'       => false,
             'can_export'        => false,

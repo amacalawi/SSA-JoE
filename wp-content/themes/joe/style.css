@@ -174,7 +174,7 @@ header .navbar-nav>li>a {
   }
 }
 header .navbar-nav>li.active,
-header .is-single li.menu-item-118 {
+#programmes header .is-single li.menu-item-118 {
   border-bottom: 15px solid #ffbf3d;
 }
 @media (max-width: 767px) {
@@ -191,7 +191,7 @@ header .is-single li.menu-item-118 {
     /*margin-top: 5em;*/
   }
   header .navbar-nav>li.active,
-  header .is-single li.menu-item-118 {
+  #programmes header .is-single li.menu-item-118 {
     border-bottom: 0px solid transparent;
   }
   header.navbar-fixed-top {
@@ -200,7 +200,7 @@ header .is-single li.menu-item-118 {
 }
 
 header .navbar-nav>li.active a,
-header .is-single li.menu-item-118 a {
+#programmes header .is-single li.menu-item-118 a {
   color: #800080;
 }
 header .nav>li>a:focus,
@@ -526,6 +526,21 @@ section.testimonial .owl-carousel .item > div .row {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+}
+section.testimonial .owl-carousel .item .quote {
+  min-height: 120px;
+}
+section.testimonial .owl-carousel .item blockquote {
+  position: relative;
+  font-style: italic;
+}
+section.testimonial .owl-carousel .item blockquote cite {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  right: 0;
+  margin-right: 20px;
+  font-weight: bold;
 }
 section.testimonial .owl-carousel .item > div:nth-child(4n+1) .quote,
 section.testimonial .owl-carousel .item > div:nth-child(4n+2) .quote {
