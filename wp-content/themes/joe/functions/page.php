@@ -82,7 +82,9 @@ function blanket_menus() {
     register_nav_menu('main-menu', __( 'Main Menu' ));
     # Main Menu
     register_nav_menu('main-menu-link', __( 'Main Menu Link' ));
-    # Language Menu
+    # Footer Main
+    register_nav_menu('main-footer-menu', __( 'Main Footer Menu' ));
+    # Footer other
     register_nav_menu('footer-menu', __( 'Footer Menu' ));
     # Social Menu
     // register_nav_menu('social-media-menu', __( 'Social Media Menu' ));
