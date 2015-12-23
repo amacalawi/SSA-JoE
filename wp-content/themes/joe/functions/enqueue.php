@@ -11,7 +11,6 @@ function blanket_styles_collection() {
     wp_enqueue_style( 'vendor', BLANKET_CSS_URI . 'style.vendor.min.css', false, '1.0.1' );
     wp_enqueue_style( 'owl-carousel', BLANKET_VENDORS_URI . 'owl-carousel/owl.carousel.css', false, '1.0.1' );
     wp_enqueue_style( 'owl-carousel-theme', BLANKET_VENDORS_URI . 'owl-carousel/owl.theme.css', false, '1.0.1' );
-    wp_enqueue_style( 'jquery-lightGallery', BLANKET_VENDORS_URI . 'lightGallery/css/lightgallery.min.css', false, '1.2.9' );
     wp_enqueue_style( 'style', get_stylesheet_uri(), false, '1.0.1' );
 }
 
@@ -21,8 +20,7 @@ function blanket_scripts_collection(){
     wp_enqueue_script( 'vendor', BLANKET_JS_URI . 'script.vendor.min.js', array('jquery'), '1.0.0', true );
 
     wp_enqueue_script( 'flexslider', BLANKET_VENDORS_URI . 'flexslider/jquery.flexslider-min.js', array('jquery'), '2.6.0', true );
-    wp_enqueue_script( 'owl-carousel', BLANKET_VENDORS_URI . 'owl-carousel/owl.carousel.min.js', array('jquery'), '2.6.0', true );
-    wp_enqueue_script( 'jquery-lightGallery', BLANKET_VENDORS_URI . 'lightGallery/js/lightgallery-all.min.js', array('jquery'), '1.2.9', true );
+    wp_enqueue_script( 'owl-carousel', BLANKET_VENDORS_URI . 'owl-carousel/owl.carousel.min.js', array('jquery'), '2.6.1', true );
 
     wp_register_script( 'google-api', 'http://maps.googleapis.com/maps/api/js?libraries=places&amp', null, 1.0, false);
     wp_enqueue_script('google-api');

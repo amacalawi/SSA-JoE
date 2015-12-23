@@ -1,17 +1,9 @@
 jQuery(document).ready(function ($) {
-
-    $(".photogal").owlCarousel({
-        navigation:true,
-        paginationSpeed : 1000,
-        goToFirstSpeed : 2000,
-        // singleItem : true,
-        items: 3,
-        autoHeightClass: 'owl-height',
-        responsive: true,
-        transitionStyle:"fade",
-        navigationText: [
-            "<i class='fa fa-chevron-left'></i>&nbsp; Prev",
-            "Next &nbsp;<i class='fa fa-chevron-right'></i>"
-        ]
+    $(".photogal").lightGallery({
+        thumbnail: true,
+        selector:'.image-selector',
+        mode: 'lg-zoom-out',
+        download: false,
+        mousewheel: true,
     });
 });
