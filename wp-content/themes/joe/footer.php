@@ -15,6 +15,7 @@ $blanket_options = get_option('blanket_theme_options'); ?>
                             <h5>Company</h5><?php
 
                             $theme_location = 'main-footer-menu';
+
                             if( has_nav_menu($theme_location) )
                             {
                                 wp_nav_menu( array(
