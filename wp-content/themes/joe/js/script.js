@@ -5,9 +5,9 @@ jQuery(document).ready(function ($) {
     | # Waypoint
     | -----------------------------------------
     */
-    $('section[class*="phase"] img, section[class*="phase"] h1, section[class*="phase"] p, section.stars h1').addClass('opacitate');
+    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p, section.stars h1').addClass('opacitate');
 
-    $('section[class*="phase"] .title, section[class*=banner] .title').waypoint(function(direction) {
+    $('body:not(#programmes) section .title').waypoint(function(direction) {
 
         $(this.element).parents('section').next('section').find('img').removeClass("opacitate").addClass('animated zoomIn');
         $(this.element).parents('section').next('section').find('h1:first-child').removeClass("opacitate").addClass('animated fadeIn');
