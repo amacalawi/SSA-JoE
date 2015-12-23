@@ -62,6 +62,12 @@ body {
 blockquote, cite {
   display: block;
 }
+blockquote a:hover {
+  color: #ffffff;
+}
+blockquote a:hover cite {
+  text-decoration: underline;
+}
 cite {
   font-style: italic;
 }
@@ -82,9 +88,21 @@ textarea {
 textarea[name=message] {
   max-height: 230px !important;
 }
-div.wpcf7-mail-sent-ok {
-   border: 2px solid transparent;
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors,
+div.wpcf7-validation-errors span {
+  border: 2px solid transparent;
   font-size: 16px;
+  color: #ffffff;
+}
+form.wpcf7-form.invalid .form-control {
+  margin-bottom: 0;
+}
+.wpcf7-response-output.wpcf7-validation-errors.wpcf7-display-none {
+  display: none !important;
+}
+div.wpcf7-validation-errors *,
+span.wpcf7-not-valid-tip {
   color: #ffffff;
 }
 .content-none {

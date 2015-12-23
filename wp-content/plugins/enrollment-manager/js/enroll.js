@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 
 
 function submit_me($form, html){
-    jQuery(html).removeClass('animated fadeIn').addClass('valign infinite animated bounce').html('<div class="icon-container"><i class="fa fa-spinner fa-spin fa-5x"></i><div class="text-center"></div></div>');
+    jQuery(html).removeClass('animated fadeIn').addClass('valign infinite animated bounce').html('<div class="icon-container"><i class="fa fa-cog fa-spin fa-5x"></i><div class="text-center"></div></div>');
     jQuery.post(
         the_ajax_script.ajaxurl,
         $form.serialize(),
