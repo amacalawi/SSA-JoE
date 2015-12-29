@@ -560,6 +560,7 @@ section.testimonial .owl-carousel .item .quote {
 section.testimonial .owl-carousel .item blockquote {
   position: relative;
   font-style: italic;
+  border: none;
 }
 section.testimonial .owl-carousel .item blockquote cite {
   position: absolute;
@@ -578,6 +579,35 @@ section.testimonial .owl-carousel .item > div:nth-child(4n+2) .quote {
   -o-order: 2;
   order: 2;
   /*float: right;*/
+}
+section.testimonial .owl-carousel .item > div:nth-child(4n+1) blockquote:after,
+section.testimonial .owl-carousel .item > div:nth-child(4n+2) blockquote:after,
+section.testimonial .owl-carousel .item > div:nth-child(4n+3) blockquote:after,
+section.testimonial .owl-carousel .item > div:nth-child(4n+4) blockquote:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-65%);
+    -ms-transform: translateY(-65%);
+    -o-transform: translateY(-65%);
+    transform: translateY(-65%);
+
+  width: 0;
+  height: 0;
+}
+section.testimonial .owl-carousel .item > div:nth-child(4n+1) blockquote:after,
+section.testimonial .owl-carousel .item > div:nth-child(4n+2) blockquote:after {
+  left: -15px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #800080;
+}
+section.testimonial .owl-carousel .item > div:nth-child(4n+3) blockquote:after,
+section.testimonial .owl-carousel .item > div:nth-child(4n+4) blockquote:after {
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #800080;
 }
 @media only screen and (max-width: 998px) {
   section.testimonial .owl-carousel .item > div:nth-child(odd) .quote {
