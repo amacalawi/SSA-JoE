@@ -11,7 +11,7 @@ function blanket_styles_collection() {
     wp_enqueue_style( 'vendor', BLANKET_CSS_URI . 'style.vendor.min.css', false, '1.0.1' );
     wp_enqueue_style( 'owl-carousel', BLANKET_VENDORS_URI . 'owl-carousel/owl.carousel.css', false, '1.0.1' );
     wp_enqueue_style( 'owl-carousel-theme', BLANKET_VENDORS_URI . 'owl-carousel/owl.theme.css', false, '1.0.1' );
-    wp_enqueue_style( 'style', get_stylesheet_uri(), false, '1.0.1' );
+    wp_enqueue_style( 'style', get_stylesheet_uri(), false, '1.0.2' );
 }
 
 # JS
