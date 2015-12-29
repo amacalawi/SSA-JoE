@@ -18,12 +18,14 @@
                     <div class="col-sm-6 text-left">
 
                         <div class="row">
-                            <blockquote class="col-sm-7 msg nsize wcolor quote"><?php
-                                echo $testimonial->post_content ?>
-                                <cite><?php echo $testimonial->post_title ?></cite>
+                            <blockquote class="col-sm-7 msg nsize wcolor quote">
+                                <a href="<?php echo get_the_permalink($testimonial->ID) ?>" class="wcolor quote"><?php
+                                    echo substr($testimonial->post_content, 0, 50) . (strlen($testimonial->post_content)>50?"...":'') ?>
+                                    <cite><?php echo $testimonial->post_title ?></cite>
+                                </a>
                             </blockquote>
                             <div class="col-sm-5 avatar">
-                                <img class="img-circle" width="122" height="122" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $testimonial->ID ) ) ?>"/>
+                                <a href="<?php echo get_the_permalink($testimonial->ID) ?>"><img class="img-circle" width="122" height="122" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $testimonial->ID ) ) ?>"/></a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
