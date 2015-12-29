@@ -90,7 +90,8 @@ textarea[name=message] {
 }
 div.wpcf7-mail-sent-ok,
 div.wpcf7-validation-errors,
-div.wpcf7-validation-errors span {
+div.wpcf7-validation-errors span,
+div.wpcf7-validation-errors p {
   border: 2px solid transparent;
   font-size: 16px;
   color: #ffffff;
@@ -892,7 +893,7 @@ section.contact-us-banner .form-control{
   }
   section.contact-us-banner h1.title,
   section.contact-us-banner form  {
-    margin-top: 280px;
+    margin-top: 260px;
   }
 }
 section.contact-us-banner .btn-default {
