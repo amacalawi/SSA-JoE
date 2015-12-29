@@ -242,8 +242,9 @@ header .navbar-nav>li.active:last-child a {
   background: #ffbf3d;
   color: #3f3f3f;
 }
+header .navbar-nav>li:last-child,
 header .navbar-nav>li.active:last-child {
-  border-bottom: 12px solid transparent;
+  border-bottom: 15px solid transparent;
 }
 header img{
   max-width: 80%;
