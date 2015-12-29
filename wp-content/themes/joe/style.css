@@ -458,7 +458,8 @@ section.photo-gallery .owl-buttons {
   background: rgba(128, 0, 128, 0.98); /*rgba(0,0,0,0.99);*/
 }
 .lg-actions .lg-next, .lg-actions .lg-prev, .lg-sub-html, .lg-toolbar,
-.lg-outer .lg-toogle-thumb {
+.lg-outer .lg-toogle-thumb,
+.lg-outer.lg-thumb-open .lg-thumb-outer {
   background: rgba(128, 0, 128, 0.8); /*rgba(0,0,0,0.8);*/
 }
 .lg-outer .lg-thumb-outer {
