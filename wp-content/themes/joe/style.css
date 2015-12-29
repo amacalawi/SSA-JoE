@@ -443,29 +443,35 @@ section.photo-gallery .owl-buttons {
   -o-transform: rotate(3deg);
   transform: rotate(3deg);
 }
+.lg-sub-html * {
+  color: #ffbf3d;
+}
 .lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item:hover,
 .lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item:focus,
 .lg-outer .lg-thumb-outer.lg-grab .lg-thumb-item.active {
-  border-color: #811f81;
+  border-color: #ffbf3d;
 }
 .lg-progress-bar .lg-progress {
-  background-color: #811f81;
+  background-color: #ffbf3d;
 }
 .lg-backdrop {
-  background: rgba(255,255,255,0.99);
+  background: rgba(128, 0, 128, 0.98); /*rgba(0,0,0,0.99);*/
 }
 .lg-actions .lg-next, .lg-actions .lg-prev, .lg-sub-html, .lg-toolbar,
 .lg-outer .lg-toogle-thumb {
-  background: rgba(255,255,255,0.8);
+  background: rgba(128, 0, 128, 0.8); /*rgba(0,0,0,0.8);*/
 }
 .lg-outer .lg-thumb-outer {
   background-color: transparent;
+}
+.lg-outer.lg-thumb-open .lg-thumb-outer {
+  padding-left: 10px;
 }
 .lg-toolbar .lg-icon:hover,
 .lg-actions .lg-next:hover, .lg-actions .lg-prev:hover,
 .lg-outer .lg-toogle-thumb:hover,
 #lg-counter, #lg-counter span {
-  color: #811f81;
+  color: #ffbf3d;
 }
 .lg-sub-html h4,
 .lg-sub-html p {
