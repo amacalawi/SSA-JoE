@@ -24,10 +24,15 @@ function pms_scripts_collection() {
     }
 }
 
-// add_action('wp_footer', 'photogal_scripts_collection');
-// function photogal_scripts_collection(){
-//     wp_enqueue_script( 'photogal', PMS_PLUGIN_JS . 'photogal.js', array('jquery', 'owl-carousel'), '1.0.0', true );
+add_action( 'wp_enqueue_scripts', 'photogal_styles_collection' );
+function photogal_styles_collection() {
+    wp_enqueue_style( 'jquery-lightGallery', PMS_PLUGIN_VENDOR . 'lightGallery/css/lightgallery.min.css', false, '1.2.9' );
+}
 
-// }
+add_action('wp_footer', 'photogal_scripts_collection');
+function photogal_scripts_collection(){
+    wp_enqueue_script( 'jquery-lightGallery', PMS_PLUGIN_VENDOR . 'lightGallery/js/lightgallery-all.min.js', array('jquery'), '1.2.9', true );
+    wp_enqueue_script( 'photogal', PMS_PLUGIN_JS . 'photogal.js', array('jquery'), '1.0.0', true );
+}
 
  ?>

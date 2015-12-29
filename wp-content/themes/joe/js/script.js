@@ -5,9 +5,9 @@ jQuery(document).ready(function ($) {
     | # Waypoint
     | -----------------------------------------
     */
-    $('section[class*="phase"] img, section[class*="phase"] h1, section[class*="phase"] p, section.stars h1').addClass('opacitate');
+    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p, section.stars h1').addClass('opacitate');
 
-    $('section .title').waypoint(function(direction) {
+    $('body:not(#programmes) section .title').waypoint(function(direction) {
 
         $(this.element).parents('section').next('section').find('img').removeClass("opacitate").addClass('animated zoomIn');
         $(this.element).parents('section').next('section').find('h1:first-child').removeClass("opacitate").addClass('animated fadeIn');
@@ -49,6 +49,11 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    /*
+    | -------------------------------
+    | # Carousel
+    | -------------------------------
+    */
     $(".photogal").owlCarousel({
         navigation:true,
         paginationSpeed : 1000,
@@ -63,6 +68,7 @@ jQuery(document).ready(function ($) {
             "Next &nbsp;<i class='fa fa-chevron-right'></i>"
         ]
     });
+
     $("#testi-slider").owlCarousel({
         navigation:true,
         paginationSpeed : 1000,
@@ -70,14 +76,6 @@ jQuery(document).ready(function ($) {
         singleItem : true,
         autoHeightClass: 'owl-height',
         responsive: true
-    });
-
-    $("#gallery-slider").lightGallery({
-        thumbnail: true,
-        selector:'.image-selector',
-        mode: 'lg-zoom-out',
-        download: false,
-        mousewheel: true,
     });
 
 
@@ -123,4 +121,6 @@ function initializeMap() {
         icon: _fromBlanket.blanketURL + '/assets/logos/marker.png',
     });
 }
-google.maps.event.addDomListener(window, 'load', initializeMap);
+if( null != document.getElementById('map') ) {
+    google.maps.event.addDomListener(window, 'load', initializeMap );
+}

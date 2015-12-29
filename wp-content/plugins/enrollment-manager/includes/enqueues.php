@@ -4,7 +4,7 @@
 add_action( 'admin_enqueue_scripts', 'enrollms_styles_collection' );
 function enrollms_styles_collection() {
     global $post_type;
-    if( PhotoController::$cpt_name_singular === $post_type)
+    if( EnrollController::$cpt_name_singular === $post_type)
     {
         wp_register_style( 'enrollms-admin', EnrollMS_PLUGIN_CSS . 'enrollms-admin.css', false, '1.0.0' );
         wp_enqueue_style( 'enrollms-admin' );
@@ -16,7 +16,7 @@ function enrollms_styles_collection() {
 add_action( 'admin_enqueue_scripts', 'enrollms_scripts_collection' );
 function enrollms_scripts_collection() {
     global $post_type;
-    if( PhotoController::$cpt_name_singular === $post_type)
+    if( EnrollController::$cpt_name_singular === $post_type)
     {
         wp_enqueue_media();
         wp_enqueue_script( 'enrollms-admin', EnrollMS_PLUGIN_JS . 'enrollms-admin.js', array('jquery'), '3.0.0', true );
