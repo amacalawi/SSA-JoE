@@ -1,4 +1,4 @@
-/*
+
  | --------------------------------------------
  | # JoE's Theme Stylesheet
  | --------------------------------------------
@@ -584,30 +584,27 @@ section.testimonial .owl-carousel .item > div:nth-child(4n+1) blockquote:after,
 section.testimonial .owl-carousel .item > div:nth-child(4n+2) blockquote:after,
 section.testimonial .owl-carousel .item > div:nth-child(4n+3) blockquote:after,
 section.testimonial .owl-carousel .item > div:nth-child(4n+4) blockquote:after {
-  content: '';
+  font-family: 'FontAwesome';
+  background-color: transparent;
+  font-style: normal;
+  color: #800080;
+  font-size: 5em;
+
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-65%);
-    -ms-transform: translateY(-65%);
-    -o-transform: translateY(-65%);
-    transform: translateY(-65%);
+  top: -5%;
 
   width: 0;
   height: 0;
 }
 section.testimonial .owl-carousel .item > div:nth-child(4n+1) blockquote:after,
 section.testimonial .owl-carousel .item > div:nth-child(4n+2) blockquote:after {
-  left: -15px;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid #800080;
+  content: '\f0d9';
+  left: -20px;
 }
 section.testimonial .owl-carousel .item > div:nth-child(4n+3) blockquote:after,
 section.testimonial .owl-carousel .item > div:nth-child(4n+4) blockquote:after {
-  right: -15px;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 15px solid #800080;
+  content: '\f0da';
+  right: 10px;
 }
 @media only screen and (max-width: 998px) {
   section.testimonial .owl-carousel .item > div:nth-child(odd) .quote {
@@ -1146,4 +1143,4 @@ section.were-hiring-banner .title,
 section.privacy-policy-banner .title {
   margin-top: 2em;
 }
-/* end extra pages */
+/* end extra pages
