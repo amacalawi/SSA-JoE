@@ -15,6 +15,11 @@
             </div>
             <div class="caption-container">
                 <div class="form-group">
+                    <strong>Alternate to Image</strong>
+                    <span class="description">This will be displayed if the Image is empty.</span>
+                    <input type="text" name="blanket_sections[0][alt]" value="<?php echo htmlentities(@$sections[0]['alt']) ?>">
+                </div>
+                <div class="form-group">
                     <strong>Heading</strong>
                     <input type="text" name="blanket_sections[0][heading]" value="<?php echo @$sections[0]['heading'] ?>">
                 </div>
@@ -41,6 +46,11 @@
                     <!-- <input type="hidden" name="blanket_sections[<?php # echo $key ?>][parentclass]" value="journey"> -->
                 </div>
                 <div class="caption-container">
+                    <div class="form-group">
+                        <strong>Alternate to Image</strong>
+                        <span class="description">This will be displayed if the Image is empty.</span>
+                        <input type="text" name="blanket_sections[<?php echo $key ?>][alt]" value="<?php echo htmlentities(@$sections[ $key ]['alt']) ?>">
+                    </div>
                     <div class="form-group">
                         <strong>Heading</strong>
                         <input type="text" name="blanket_sections[<?php echo $key ?>][heading]" value="<?php echo @$sec['heading'] ?>">

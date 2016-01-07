@@ -5,11 +5,12 @@ jQuery(document).ready(function ($) {
     | # Waypoint
     | -----------------------------------------
     */
-    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p, section.stars h1').addClass('opacitate');
+    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] .hides, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p, section.stars h1').addClass('opacitate');
 
     $('body:not(#programmes) section .title').waypoint(function(direction) {
 
         $(this.element).parents('section').next('section').find('img').removeClass("opacitate").addClass('animated zoomIn');
+        $(this.element).parents('section').next('section').find('.hides').removeClass("opacitate").addClass('animated zoomIn');
         $(this.element).parents('section').next('section').find('h1:first-child').removeClass("opacitate").addClass('animated fadeIn');
         $(this.element).parents('section').next('section').find('h1:nth-child(2)').delay(200).queue(function(next){
             $(this).removeClass("opacitate").addClass('animated fadeIn');
