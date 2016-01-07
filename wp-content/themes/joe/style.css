@@ -1,4 +1,4 @@
-
+/*
  | --------------------------------------------
  | # JoE's Theme Stylesheet
  | --------------------------------------------
@@ -680,6 +680,7 @@ section[class*="phase"]:nth-child(odd) .container > div:first-child {
   -ms-order: 2;
   -o-order: 2;
   order: 2;
+  text-align: left;
 }
 section[class*="phase"]:nth-child(odd) .container h1,
 section[class*="phase"]:nth-child(odd) .container p {
