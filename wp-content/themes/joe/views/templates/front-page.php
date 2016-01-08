@@ -21,14 +21,18 @@
 
             <section class="journey">
                 <div class="container"><?php
-                    if(has_post_thumbnail()) { ?>
+                    $heading = get_post_meta($post->ID, 'blanket_heading', true);
+                    if( $heading['content'] ) { ?>
                     <div class="col-sm-offset-1 col-sm-5">
-                        <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>"/>
+                        <div class="hides">
+                            <?php echo do_shortcode( $heading['content'] ) ?>
+                        </div>
+                        <!-- <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>"/> -->
                     </div><?php
                     } ?>
                     <div class="<?php echo (has_post_thumbnail()?'col-sm-5':'col-sm-12') ?>">
-                        <h1 class="title"><?php the_title() ?></h1><?php
-                        the_content() ?>
+                        <h1 class="title"><?php echo $heading['heading']; ?></h1><?php
+                        echo wpautop($heading['subheading']) ?>
                     </div><div class="clearfix"></div>
                 </div>
             </section>
@@ -41,7 +45,7 @@
                     <div class="container">
                         <div class="col-sm-offset-2 col-sm-8">
                             <?php if($section['heading']): ?><h1 class="wcolor text-center"><?php echo $section['heading'] ?></h1><?php endif; ?>
-                            <?php if($section['content']): ?><p class="wcolor text-center"><?php echo $section['content'] ?></p><?php endif; ?>
+                            <?php if($section['content']): ?><p class="wcolor text-center"><?php echo do_shortcode( $section['content'] ) ?></p><?php endif; ?>
                         </div>
                     </div>
                 </section> <?php
