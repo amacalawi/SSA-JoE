@@ -19,6 +19,23 @@ function blanket_button_shortcodes( $atts, $content = null ) {
     return '<a '.($a['modal']?'data-dismiss="modal"':'').' id="'.$a['id'].'" class="'.$a['class'].'" href="'.$a['link'].'"><i class="fa fa-'.$a['icon'].'"></i>'.$content.'</a>';
 }
 
+add_shortcode( 'notice', 'blanket_notice_shortcodes' );
+function blanket_notice_shortcodes( $atts, $content = null ) {
+    $a = shortcode_atts( array(
+            'id'    => 'btn_'.get_the_ID(),
+            'type' => 'info',
+            'close' => false,
+            'icon'  => '',
+        ), $atts );
+
+    $alert = '<div class="alert alert-'.$a['type'].'">';
+    if($a['close']) $alert.= '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
+    $alert.= $content;
+    $alert.= '</div>';
+
+    return $alert;
+}
+
 # Tabs
 $blanket_tabtitles = [];
 add_shortcode("tab-content", "tab_content_callback");

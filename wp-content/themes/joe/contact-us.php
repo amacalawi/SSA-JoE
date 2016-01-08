@@ -11,7 +11,7 @@
         <div class="col-sm-6">
             <h1 class="title theme-color"><?php echo(empty($heading['heading']) ? get_the_title() : $heading['heading']) ?></h1>
 
-            <h3 class="dosis-reg"><?php echo $post->post_content ?></h3>
+            <h3 class="dosis-reg"><?php echo do_shortcode( wpautop($post->post_content) ) ?></h3>
 
             <?php
 
