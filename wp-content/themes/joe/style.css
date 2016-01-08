@@ -768,6 +768,9 @@ section.programmes-banner h2{
     margin-top: 140px;
   }
 }
+section.programme-phase .tab-pane .col-sm-4.text-center {
+  height: 550px;
+}
 @media(min-width: 768px) and (max-width: 1366px) {
   section.programmes-banner {
     min-height: 100vh;
