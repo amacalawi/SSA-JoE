@@ -66,7 +66,8 @@ $categories= get_terms(
                                         'terms' => $category->term_id, // Where term_id of Term 1 is "1".
                                         'include_children' => false
                                     )
-                                )
+                                ),
+                                'posts_per_page' => -1,
                             );
                             $phases = get_posts( $args );
 
@@ -77,12 +78,6 @@ $categories= get_terms(
                                         <?php echo $phase->post_title ?>
                                     </h3>
                                     <?php echo wpautop( substr($phase->post_content, 0, 150) . "..." ); ?>
-                                    <!-- <ul>
-                                        <li>dolor ganar takar wereya sitanss sasa s</li>
-                                        <li>dolor ganar takar wereya sitan</li>
-                                        <li>dolor ganar takar wereya sitan</li>
-                                        <li>dolor ganar takar wereya sitan</li>
-                                    </ul> -->
                                     <a href="<?php echo get_the_permalink($phase->ID) ?>" class="btn btn-info">read more</a>
                                 </div> <?php
 
