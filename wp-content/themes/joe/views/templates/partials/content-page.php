@@ -38,24 +38,45 @@ endif; ?>
 $sections = get_post_meta($post->ID, 'blanket_sections', true);
 
 if( ($sections[0]['image'] || $sections[0]['alt']) && $sections[0]['heading'] && $sections[0]['content'] && $sections[0]['section_class'] ) {
-foreach ($sections as $section) { ?>
+foreach ($sections as $key => $section) { ?>
     <section class="<?php echo $section['section_class'] ? $section['section_class'] : 'stars' ?>" <?php if($section['section_class']=='stars'&& !empty($section['image'])) echo "style='background-image: url(".$section['image'].");'" ?>>
-        <div class="container">
-            <?php if($section['image'] && $section['section_class'] != 'stars'): ?>
-            <div class="col-sm-offset-1 col-sm-5 text-center">
-                <img src="<?php echo $section['image'] ?>" class="hides" />
-            </div>
-            <?php elseif(empty($section['image']) && $section['alt']): ?>
-            <div class="col-sm-offset-1 col-sm-5 text-center">
-                <div class="hides">
-                    <?php echo do_shortcode( $section['alt'] ); ?>
+        <div class="container"><?php
+            if( $key % 2 == 0 ): ?>
+                <!-- right -->
+                <?php if($section['image'] && $section['section_class'] != 'stars'): ?>
+                <div class="col-sm-offset-1 col-sm-5 text-right">
+                    <img src="<?php echo $section['image'] ?>" class="hides" />
                 </div>
-            </div>
+                <?php elseif(empty($section['image']) && $section['alt']): ?>
+                <div class="col-sm-offset-1 col-sm-5 text-right">
+                    <div class="hides">
+                        <?php echo do_shortcode( $section['alt'] ); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <div class="<?php echo ((($section['image'] && $section['section_class'] != 'stars') || ($section['alt'] && empty($section['image'])))?'col-sm-5':'col-sm-offset-1 col-sm-10 text-left wcolor dosis-reg') ?>">
+                    <?php if($section['heading']): ?><h1 class="title theme-color"><?php echo $section['heading'] ?></h1><?php endif; ?>
+                    <?php echo do_shortcode( wpautop($section['content']) ) ?>
+                </div><div class="clearfix"></div>
+            <?php else: ?>
+                <!-- left -->
+                <div class="<?php echo ((($section['image'] && $section['section_class'] != 'stars') || ($section['alt'] && empty($section['image'])))?'col-sm-offset-1 col-sm-5':'col-sm-offset-1 col-sm-10 text-right wcolor dosis-reg') ?>">
+                    <?php if($section['heading']): ?><h1 class="title theme-color text-right"><?php echo $section['heading'] ?></h1><?php endif; ?>
+                    <?php echo do_shortcode( wpautop($section['content']) ) ?>
+                </div>
+                <?php if($section['image'] && $section['section_class'] != 'stars'): ?>
+                <div class="col-sm-5 text-left">
+                    <img src="<?php echo $section['image'] ?>" class="hides" />
+                </div>
+                <?php elseif(empty($section['image']) && $section['alt']): ?>
+                <div class="col-sm-5 text-left">
+                    <div class="hides">
+                        <?php echo do_shortcode( $section['alt'] ); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <div class="clearfix"></div>
             <?php endif; ?>
-            <div class="<?php echo ((($section['image'] && $section['section_class'] != 'stars') || ($section['alt'] && empty($section['image'])))?'col-sm-5':'col-sm-offset-1 col-sm-10 text-center wcolor dosis-reg') ?>">
-                <?php if($section['heading']): ?><h1 class="title theme-color"><?php echo $section['heading'] ?></h1><?php endif; ?>
-                <?php echo do_shortcode( wpautop($section['content']) ) ?>
-            </div><div class="clearfix"></div>
         </div>
     </section> <?php
 }

@@ -667,25 +667,7 @@ section[class*="phase"] {
   min-height: 508px;
   overflow: hidden;
 }
-section[class*="phase"]:nth-child(odd) .container {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-}
-section[class*="phase"]:nth-child(odd) .container > div:first-child {
-  -webkit-order: 2;
-  -moz-order: 2;
-  -ms-order: 2;
-  -o-order: 2;
-  order: 2;
-  text-align: left;
-}
-section[class*="phase"]:nth-child(odd) .container h1,
-section[class*="phase"]:nth-child(odd) .container p {
-  text-align: right;
-}
+
 section.phase2,
 section.phase4 {
   background: #f5f4f1;
