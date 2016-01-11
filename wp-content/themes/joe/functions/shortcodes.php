@@ -37,12 +37,12 @@ function blanket_notice_shortcodes( $atts, $content = null ) {
 }
 
 # Tabs
-$blanket_tabtitles = [];
+$tabs_name;
 add_shortcode("tab-content", "tab_content_callback");
 function tab_content_callback($atts, $content=null)
 {
-    global $blanket_tabtitles;
     ob_start();
+    global $tabs_name;
     $a = shortcode_atts( array(
         'id'    => '',
         'title' => '',
@@ -51,10 +51,10 @@ function tab_content_callback($atts, $content=null)
         'active'=>''
     ), $atts );
 
-    $blanket_tabtitles[] = $a['title']; ?>
+    $tabs_name[] = $a['title']; ?>
 
     <div class="tab-pane fade in <?php echo $a['active'] ?>" id="tabbable_<?php echo get_the_ID(); ?>_<?php echo $a['id'] ?>">
-        <?php echo do_shortcode($content) ?>
+        <?php echo wpautop(do_shortcode($content)) ?>
     </div><?php
 
     return ob_get_clean();
@@ -63,16 +63,14 @@ function tab_content_callback($atts, $content=null)
 add_shortcode("tabs", "tabs_callback");
 function tabs_callback($atts, $content=null)
 {
-    global $blanket_tabtitles;
     ob_start();
+    global $tabs_name;
     $a = shortcode_atts( array(
         'id'    => 'tabbable_'.get_the_ID().'_',
         'class' => 'tabbable-panel-disabled',
         'inner-class' => 'tabbable-line',
         'content-class' => 'tab-content',
-        'title'=>'',
     ), $atts );
-
     # Navigation
     $navs_count = substr_count( $content, '[tab-content' );
 
@@ -80,5 +78,3 @@ function tabs_callback($atts, $content=null)
 
     return ob_get_clean();
 }
-
- ?>
