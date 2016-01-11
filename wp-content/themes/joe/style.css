@@ -1145,3 +1145,24 @@ section.privacy-policy-banner .title {
   margin-top: 2em;
 }
 /* end extra pages
+
+/*
+| -----------------
+| # tabby overrides
+| -----------------
+*/
+.responsive-tabs-wrapper .responsive-tabs .responsive-tabs__panel {
+  border: 2px solid transparent;
+  padding: 10px 0 0;
+}
+.responsive-tabs-wrapper .responsive-tabs .responsive-tabs__list__item.responsive-tabs__list__item--active {
+  border: none;
+  border-bottom: 3px solid #800080;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #800080;
+  font-weight: bold;
+}
+.responsive-tabs-wrapper .responsive-tabs .responsive-tabs__list__item {
+  font-size: 1.2em;
+}
