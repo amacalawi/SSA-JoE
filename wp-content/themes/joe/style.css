@@ -626,8 +626,20 @@ section.testimonial .owl-carousel .item > div:nth-child(4n+4) blockquote:after {
 
 
 
-
-
+/*phase section single*/
+.single-phase-content {
+  margin-top: 15em;
+}
+.single-phase-content .phase-thumbnail img {
+  width: 350px;
+  height: 350px;
+}
+.single-phase-content .phase-title {
+  font-size: 3em;
+}
+.single-phase-content .phase-content {
+  font-size: 1.3em;
+}
 
 
 
