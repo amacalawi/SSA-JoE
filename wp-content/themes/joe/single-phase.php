@@ -15,7 +15,7 @@ get_header(); ?>
             <div class="container">
                 <div class="col-md-5 col-xs-12">
                     <div class="img-circle phase-thumbnail">
-                        <?php the_post_thumbnail() ?>
+                        <?php the_post_thumbnail(['auto','auto'],['class'=>'img-circle']) ?>
                     </div>
                 </div>
                 <div class="col-offset-md-1 col-md-5 col-xs-12">
