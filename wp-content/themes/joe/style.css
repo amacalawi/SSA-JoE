@@ -643,13 +643,26 @@ section.testimonial .owl-carousel .item > div:nth-child(4n+4) blockquote:after {
     order: 0;
   }
 }
+.other-testimonies-container {
+  margin-top: 2rem;
+  /*background-color: #fdbe3d*/
+}
+.other-testimonies-container section.testimonial {
+  background-color: transparent;
+  padding-top: 0;
+}
 /* testimonial section css end */
 
 
 
 /*phase section single*/
-.single-phase-content {
-  margin-top: 15em;
+.single-phase-content,
+.single-content {
+  margin-top: 131px;
+}
+.single-content-section {
+  padding: 2em 0;
+  background-color: #fdbe3d;
 }
 .single-phase-content .phase-thumbnail img {
   width: 350px;
