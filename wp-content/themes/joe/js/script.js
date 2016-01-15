@@ -101,7 +101,8 @@ jQuery(document).ready(function ($) {
             $(this).text('View Map');
             $(_shrink).css({width:'50%'});
         }
-    })
+    });
+
 });
 
 function initializeMap() {

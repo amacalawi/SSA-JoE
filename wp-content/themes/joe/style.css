@@ -82,7 +82,7 @@ cite:before {
   left: 0;
   width: 50px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: rgba(255,255,255,0.4);
 }
 textarea {
   max-width: 100%;
@@ -519,6 +519,19 @@ section.testimonial p{
   text-align: center;
   margin-bottom: 30px;
 }
+section.testimonial blockquote p {
+  text-align: left;
+  margin-bottom: 0px;
+  font-size: 17px;
+  line-height: 1.2;
+}
+section.testimonial blockquote .readmore {
+  color: #ffbf3d;
+  font-size: 17px;
+}
+section.testimonial blockquote .readmore:hover {
+  text-decoration: underline;
+}
 section.testimonial #owl-demo .owl-item div{
   padding:5px;
 }
@@ -558,19 +571,24 @@ section.testimonial .owl-carousel .item > div .row {
   display: flex;
 }
 section.testimonial .owl-carousel .item .quote {
-  min-height: 120px;
+  min-height: 140px;
 }
+
 section.testimonial .owl-carousel .item blockquote {
   position: relative;
   font-style: italic;
   border: none;
 }
-section.testimonial .owl-carousel .item blockquote cite {
+section.testimonial .owl-carousel .item blockquote .cite-container {
   position: absolute;
   bottom: 0;
-  margin-bottom: 10px;
-  right: 0;
-  margin-right: 20px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  padding: 10px 20px;
+}
+section.testimonial .owl-carousel .item blockquote cite {
+  text-align: right;
   font-weight: bold;
 }
 section.testimonial .owl-carousel .item > div:nth-child(4n+1) .quote,

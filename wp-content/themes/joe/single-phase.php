@@ -21,7 +21,7 @@ get_header(); ?>
                 <div class="col-offset-md-1 col-md-5 col-xs-12">
                     <h1 class="phase-title theme-color text-uppercase"><?php the_title() ?></h1>
                     <div class="phase-content">
-                        <?php echo get_the_content() ?>
+                        <?php echo do_shortcode(get_the_content()); ?>
                     </div>
                 </div>
             </div>
