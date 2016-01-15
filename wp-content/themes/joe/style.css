@@ -14,6 +14,9 @@
 .page {
     min-height: 100vh;
 }
+.img-circle {
+  border: 1px solid rgba(0,0,0,0.09);
+}
 .custom-_edit_last, .custom-_edit_lock {
   display: none;
 }
