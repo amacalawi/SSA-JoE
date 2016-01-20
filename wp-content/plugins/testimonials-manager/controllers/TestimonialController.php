@@ -125,7 +125,8 @@ class TestimonialController
     {
         global $post;
         $a = shortcode_atts( array(
-            'id' => $post->ID
+            'id' => $post->ID,
+            'title' => 'Testimonials',
         ), $atts );
 
         // $testimonials = get_posts( array('post_status'=>'publish', 'post_type'=> PhotoController::$cpt_name_singular) );
