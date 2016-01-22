@@ -18,9 +18,12 @@ $categories= get_terms(
                 $cat_data = get_option("category_".$category->term_id); ?>
 
                 <div role="tabpanel" class="tab-pane <?php echo(0==$key?'fade in active':'') ?> <?php echo $category->slug ?>">
+                    <?php if($cat_data['subheading']): ?><div class="text-center"><?php echo do_shortcode(stripcslashes($cat_data['subheading'])) ?></div><?php endif; ?>
                     <h1 class="title text-center text-uppercase"><?php echo $category->name ?></h1>
                     <?php if($cat_data['heading']): ?><h1 class="text-center text-uppercase"><?php echo $cat_data['heading'] ?></h1><?php endif; ?>
-                    <?php if($cat_data['subheading']): ?><p class="text-center"><?php echo $cat_data['subheading'] ?></p><?php endif; ?>
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <p class="text-center"><?php echo do_shortcode($category->description) ?></p>
+                    </div>
                 </div>
                 <?php
 
@@ -78,7 +81,6 @@ $categories= get_terms(
                                         <?php echo $phase->post_title ?>
                                     </h3>
                                     <?php echo wpautop( substr($phase->post_content, 0, 150) . "..." ); ?>
-                                    <a href="<?php echo get_the_permalink($phase->ID) ?>" class="btn btn-info">read more</a>
                                 </div> <?php
 
                             }

@@ -53,14 +53,14 @@ function extra_category_fields( $tag ) {    //check for existing featured ID
 <tr class="form-field">
     <th scope="row" valign="top"><label for="heading"><?php _e('Heading'); ?></label></th>
     <td>
-        <input type="text" name="Cat_meta[heading]" id="Cat_meta[heading]" size="25" style="width:60%;" value="<?php echo $cat_meta['heading'] ? $cat_meta['heading'] : ''; ?>"><br />
+        <input type="text" name="Cat_meta[heading]" id="Cat_meta[heading]" size="25" style="width:60%;" value="<?php echo $cat_meta['heading'] ? esc_attr( $cat_meta['heading'] ) : ''; ?>"><br />
         <span class="description"><?php _e('Heading'); ?></span>
     </td>
 </tr>
 <tr class="form-field">
     <th scope="row" valign="top"><label for="subheading"><?php _e('Subheading'); ?></label></th>
     <td>
-        <input type="text" name="Cat_meta[subheading]" id="Cat_meta[subheading]" size="25" style="width:60%;" value="<?php echo $cat_meta['subheading'] ? $cat_meta['subheading'] : ''; ?>"><br />
+        <input type="text" name="Cat_meta[subheading]" id="Cat_meta[subheading]" size="25" style="width:60%;" value="<?php echo $cat_meta['subheading'] ? esc_attr( $cat_meta['subheading'] ) : ''; ?>"><br />
         <span class="description"><?php _e('Subheading'); ?></span>
     </td>
 </tr>
