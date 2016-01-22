@@ -815,7 +815,7 @@ section.programmes-banner h2{
   }
 }
 section.programme-phase .tab-pane .col-sm-4.text-center {
-  height: 550px;
+  height: auto;
 }
 @media(min-width: 768px) and (max-width: 1366px) {
   section.programmes-banner {
