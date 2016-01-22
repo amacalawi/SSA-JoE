@@ -660,9 +660,16 @@ section.testimonial .owl-carousel .item > div:nth-child(4n+4) blockquote:after {
 .single-content {
   margin-top: 131px;
 }
+.phase-logo-container {
+  margin-top: 25px;
+}
 .single-content-section {
   padding: 2em 0;
   background-color: #fdbe3d;
+}
+.phase-nav-tabs {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .single-phase-content .phase-thumbnail img {
   width: 350px;
@@ -1199,4 +1206,62 @@ section.privacy-policy-banner .title {
 }
 .responsive-tabs-wrapper .responsive-tabs .responsive-tabs__list__item {
   font-size: 1.2em;
+}
+
+/*
+| ------------------------
+| # Modal
+| ------------------------
+*/
+.pricing-modal .modal-content {
+  padding: 0 !important;
+  padding-bottom: 20px !important;
+}
+.pricing-modal .modal-content .modal-header {
+  padding: 20px !important;
+}
+/*
+| ------------------------
+| # Panel / Card Overrides
+| ------------------------
+*/
+.pricing {
+  background-color: #f5f4f1;
+}
+.card-group [class*="col-"] {
+  padding: 0 !important;
+}
+.card {
+  padding: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.05);
+  border: none;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+.card .panel-heading {
+  padding: 20px;
+  position: relative;
+}
+.card .img-circle {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: -100px;
+}
+.card .panel-heading {
+  background-color: #823c82;
+  border-radius: 0;
+}
+.card .panel-body {
+  padding-top: 0;
+}
+.card .panel-body .list-group .list-group-item:first-child {
+  border-top: none;
+}
+.card .panel-body .list-group .list-group-item {
+  border-left: none;
+  border-right: none;
 }
