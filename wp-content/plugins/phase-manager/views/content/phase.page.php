@@ -17,29 +17,31 @@ $categories = get_terms(
                     //then i get the data from the database
                     $cat_data = get_option("category_".$category->term_id); ?>
 
-                    <div role="tabpanel" class="tab-pane <?php echo(0==$key?'fade in active':'') ?> <?php echo $category->slug ?>">
+                    <div role="tabpanel" class="clearfix tab-pane <?php echo(0==$key?'fade in active':'') ?> <?php echo $category->slug ?>">
 
-                        <?php if($cat_data['subheading']): ?>
-                            <div class="text-center">
-                                <?php echo do_shortcode( stripcslashes( $cat_data['subheading'] ) ) ?>
-                            </div>
-                        <?php endif; ?>
-
-                        <h1 class="title text-center text-uppercase"><?php echo $category->name ?></h1>
-                        <?php if($cat_data['heading']): ?>
-                            <h1 class="text-center text-uppercase"><?php echo $cat_data['heading'] ?></h1>
-                        <?php endif; ?>
-
-                        <div class="col-sm-6 col-sm-offset-3">
-                            <p class="text-center"><?php echo do_shortcode($category->description) ?></p>
+                        <div class="col-sm-5 text-right">
+                            <?php if($cat_data['subheading']): ?>
+                                <div class="phase-logo-container">
+                                    <?php echo do_shortcode( stripcslashes( $cat_data['subheading'] ) ) ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
+                        <div class="col-sm-7">
+                            <h1 class="title  text-uppercase"><?php echo $category->name ?></h1>
+                            <?php if($cat_data['heading']): ?>
+                                <h1 class=" text-uppercase"><?php echo $cat_data['heading'] ?></h1>
+                            <?php endif; ?>
+                            <p><?php echo do_shortcode($category->description) ?></p>
+                        </div>
+
                     </div><?php
 
                 endforeach; ?>
             </div>
+            <div class="clearfix"></div>
 
             <div class="text-center">
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs phase-nav-tabs" role="tablist">
                     <?php
                     foreach ($categories as $key => $category) : ?>
 
@@ -86,7 +88,7 @@ $categories = get_terms(
                                     echo "<div class='clearfix'>";
                                 } ?>
 
-                                <div class="col-sm-4 text-center">
+                                <div class="col-md-4 text-center">
                                     <img width="220" height="220" class="img-circle" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $phase->ID ) ) ?>"/>
                                     <h3 class="text-uppercase theme-color">
                                         <?php echo $phase->post_title ?>
