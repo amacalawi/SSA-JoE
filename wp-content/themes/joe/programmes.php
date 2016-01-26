@@ -47,7 +47,7 @@ if( !empty($sections[0]['image']) && !empty($sections[0]['heading']) && !empty($
                                 $list_i = explode("|", $list_item); ?>
                                 <div class="list-group-item">
                                     <a class="btn btn-default btn-block" data-toggle="modal" href='#modal_<?php echo $random_num = rand(10, 200); ?>'>See Pricing</a>
-                                </div> <?php
+                                </div><?php
                                 } ?>
                                 <div class="modal fade" id="modal_<?php echo $random_num; ?>">
                                     <div class="modal-dialog pricing-modal">
@@ -55,7 +55,7 @@ if( !empty($sections[0]['image']) && !empty($sections[0]['heading']) && !empty($
 
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                <h4 class="modal-title text-uppercase">Pricing</h4>
+                                                <h2 class="modal-title text-uppercase">Pricing</h2>
                                             </div>
 
                                             <table class="table table-bordered">

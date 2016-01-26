@@ -53,13 +53,13 @@ section {
 .bg-light {
   background: #fafafa;
 }
-.wcolor, 
-.wcolor h1, 
-.wcolor h2, 
-.wcolor h3, 
-.wcolor h4, 
-.wcolor h5, 
-.wcolor h6, 
+.wcolor,
+.wcolor h1,
+.wcolor h2,
+.wcolor h3,
+.wcolor h4,
+.wcolor h5,
+.wcolor h6,
 .wcolor p {
   color: #fff;
 }
@@ -453,6 +453,9 @@ section.programmes-banner h2{
   section.programmes-banner .col-sm-8 {
     margin-top: 140px;
   }
+}
+section.programmes-banner .tab-content [class*="phase"] .clearfix {
+    margin-bottom: 40px;
 }
 @media(min-width: 768px) and (max-width: 1366px) {
   section.programmes-banner {
