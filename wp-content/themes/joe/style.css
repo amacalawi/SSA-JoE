@@ -1283,9 +1283,16 @@ section.privacy-policy-banner .title {
   display: block;
 }
 
+.registration-section {
+  padding-top: 180px;
+}
 .registration-section div.wpcf7-validation-errors *, .registration-section span.wpcf7-not-valid-tip {
   color: #800080;
 }
 .registration-section .registration-header {
   margin-bottom: 2em;
+}
+.registration-section .wpcf7-response-output.wpcf7-mail-sent-ok {
+  padding: 20px;
+  color: #800080;
 }
