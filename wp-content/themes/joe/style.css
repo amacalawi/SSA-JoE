@@ -778,9 +778,10 @@ section.about-banner h2{
 }
 section.about-banner {
   width: 100%;
-  background: url(images/about-banner.png) no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background: url(images/about.jpg) no-repeat;
+  background-size: 80% 100%;
+  background-color: #d7ecf3;
+  background-position: left center;
 }
 section.about-phase1 img {
   max-width: 100%;
@@ -807,6 +808,9 @@ section.about-phase1 img {
 
 
 /* programmes section css start */
+section.programmes-banner {
+  padding-bottom: 0;
+}
 section.programmes-banner .col-sm-8 {
     margin-top: 100px;
 }
@@ -818,7 +822,7 @@ section.programmes-banner h2{
     min-height: 768px;
   }
   section.programmes-banner .col-sm-8 {
-    margin-top: 140px;
+    /*margin-top: 140px;*/
   }
 }
 section.programme-phase .tab-pane .col-sm-4.text-center {
@@ -831,9 +835,10 @@ section.programme-phase .tab-pane .col-sm-4.text-center {
 }
 section.programmes-banner {
   width: 100%;
-  background: url(../images/programmes-banner.jpg) no-repeat;
+  background: #f5f4f0;
+  /*background: url(../images/programmes-banner.jpg) no-repeat;*/
   background-size: cover;
-  background-position: center center;
+  background-position: bottom;
 }
 section.programme-phase h1.title {
   color: #f9c126;
@@ -880,6 +885,50 @@ section.programme-phase h1.title {
   border-radius: 20px;
   background: #f9c126;
   border: 1px solid #f9c126;
+}
+#programmes .sides {
+  margin-top: 40px;
+}
+#programmes .sides h2 {
+  background: #800080;
+  line-height: 80px;
+  min-height: 80px;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+}
+#programmes .sides img {
+  width: 100%;
+}
+#programmes .content { 
+  background: #fff;
+}
+#programmes .content p.first {
+  min-height: 107px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+#programmes .content p {  
+  text-align: center;
+  padding: 15px 20px;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+}
+#programmes .content .btn {
+  background: #ffbf3d;
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+}
+#programmes .bottom {
+  background: url(images/programmes-banner-bottom);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 385px;
+  margin-top: 30px;
 }
 /* programmes section css end */
 

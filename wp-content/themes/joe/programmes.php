@@ -1,5 +1,6 @@
 <?php $heading = get_post_meta($post->ID, 'blanket_heading', true); ?>
-<section class="programmes-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)">
+<section class="programmes-banner"> 
+<!--style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)"-->
     <div class="container">
         <div class="col-sm-offset-2 col-sm-8 text-center">
             <h1 class="title theme-color text-uppercase"><?php the_title() ?></h1>
@@ -8,10 +9,86 @@
             <p><?php echo $heading['content'] ?></p>
             <?php }; ?>
         </div>
+
+        <div class="row">
+            <div class="col-sm-4 sides">
+                <h2 class="title wolor">5-MONTH FAST TRACK</h2>
+                <img src="http://journey-of-entrepreneurship.com.sg/demo/wp-content/uploads/2016/01/envisioning.png"/>
+                <div class="content">
+                    <p class="first">
+                        Learn all about the entrepreneurship through experential learning.
+                    </p>
+                    <p>
+                        20 weeks
+                    </p>
+                    <p>
+                        2 hours/week
+                    </p>
+                    <p>
+                        No Meals included
+                    </p>
+                    <p>
+                        <button class="btn">
+                            See Pricing
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 sides">
+                <h2 class="title wolor">1-WEEK HOLIDAY BOOTCAMP</h2>                
+                <img src="http://journey-of-entrepreneurship.com.sg/demo/wp-content/uploads/2016/01/time-management.png"/>
+                <div class="content">
+                    <p class="first">
+                        Have loads of enthusiasm and energy to spare? Experience JoE over an intensive 5-day camp!
+                    </p>
+                    <p>
+                        5 days
+                    </p>
+                    <p>
+                        8 hours/day
+                    </p>
+                    <p>
+                        Meals included
+                    </p>
+                    <p>
+                        <button class="btn">
+                            See Pricing
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 sides">
+                <h2 class="title wolor">10-MONTH THOROUGH TRACK</h2>
+                <img src="http://journey-of-entrepreneurship.com.sg/demo/wp-content/uploads/2016/01/recognising-opportunities.png"/>
+                <div class="content">
+                    <p class="first">
+                        Develop an entrepreneurial mindset at a more organic pace through the 10-month Thorough Track.
+                    </p>
+                    <p>
+                        40 weeks
+                    </p>
+                    <p>
+                        2 hours/week
+                    </p>
+                    <p>
+                        Meals included
+                    </p>
+                    <p>
+                        <button class="btn">
+                            See Pricing
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
     </div>
 </section>
 
 <?php
+/*
 $sections = get_post_meta($post->ID, 'blanket_sections', true);
 
 if( !empty($sections[0]['image']) && !empty($sections[0]['heading']) && !empty($sections[0]['content']) && !empty($sections[0]['section_class']) ): ?>
@@ -101,9 +178,10 @@ if( !empty($sections[0]['image']) && !empty($sections[0]['heading']) && !empty($
     </section><?php
 endif; ?>
 
-<?php the_content() ?>
+<?php //the_content() ?>
 
 <?php
+/*
 $sections = get_post_meta($post->ID, 'blanket_sections', true);
 foreach ($sections as $section) {
     if( !empty($section['image']) && !empty($section['heading']) && !empty($section['subheading']) && !empty($section['section_class']) ): ?>
@@ -122,11 +200,13 @@ foreach ($sections as $section) {
     </section> <?php
     endif;
 }
+*/
 
  ?>
 
 
 <?php
+/*
 $parts =get_post_meta($post->ID, 'blanket_parts', true);
 if(!empty($parts[0]['image']) && !empty($parts[0]['part_class']) && !empty($parts[0]['heading']) ): ?>
 <section class="<?php echo $parts[0]['part_class'] ? $parts[0]['part_class'] : 'student' ?>">
@@ -141,4 +221,6 @@ if(!empty($parts[0]['image']) && !empty($parts[0]['part_class']) && !empty($part
         </div><div class="clearfix"></div>
     </div>
 </section>
-<?php endif; ?>
+<?php endif; 
+*/
+?>
