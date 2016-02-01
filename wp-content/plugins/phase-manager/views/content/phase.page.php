@@ -93,7 +93,9 @@ $categories = get_terms(
                                     <h3 class="text-uppercase theme-color">
                                         <?php echo $phase->post_title ?>
                                     </h3>
-                                    <?php echo wpautop( $phase->post_content ); ?>
+                                    <div class="text-left">
+                                        <?php echo wpautop( $phase->post_content ); ?>
+                                    </div>
                                 </div> <?php
 
                                 if ($count%3 == 0)
