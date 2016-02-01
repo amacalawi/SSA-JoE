@@ -93,7 +93,7 @@ $categories = get_terms(
                                     <h3 class="text-uppercase theme-color">
                                         <?php echo $phase->post_title ?>
                                     </h3>
-                                    <div class="text-justify">
+                                    <div class="text-left">
                                         <?php echo wpautop( $phase->post_content ); ?>
                                     </div>
                                 </div> <?php
