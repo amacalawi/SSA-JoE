@@ -1260,6 +1260,7 @@ section.privacy-policy-banner .title {
 }
 .card .panel-body .list-group .list-group-item:first-child {
   border-top: none;
+  min-height: 97px;
 }
 .card .panel-body .list-group .list-group-item {
   border-left: none;
