@@ -454,7 +454,7 @@ section.programmes-banner h2{
     margin-top: 140px;
   }
 }
-section.programmes-banner .tab-content [class*="phase"] .clearfix {
+section.programme-phase .tab-content [class*="phase"] .clearfix {
     margin-bottom: 40px;
 }
 @media(min-width: 768px) and (max-width: 1366px) {
