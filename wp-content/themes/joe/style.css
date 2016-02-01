@@ -1266,3 +1266,26 @@ section.privacy-policy-banner .title {
   border-left: none;
   border-right: none;
 }
+.selectpicker+.bootstrap-select .btn-default {
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+.selectpicker+.bootstrap-select .btn-default,
+.selectpicker+.bootstrap-select .btn-default span {
+  color: rgba(0,0,0,0.3);
+}
+.selectpicker.selectpicker-lg+.bootstrap-select .btn-default {
+  height: 46px;
+  padding: 10px 16px;
+  line-height: 1.3333333;
+}
+.wpcf7-form-control-wrap.dateofbirth {
+  display: block;
+}
+
+.registration-section div.wpcf7-validation-errors *, .registration-section span.wpcf7-not-valid-tip {
+  color: #800080;
+}
+.registration-section .registration-header {
+  margin-bottom: 2em;
+}

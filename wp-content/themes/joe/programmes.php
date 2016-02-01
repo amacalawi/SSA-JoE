@@ -1,21 +1,8 @@
-<?php $heading = get_post_meta($post->ID, 'blanket_heading', true); ?>
-<section class="programmes-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)">
-    <div class="container">
-        <div class="col-sm-offset-2 col-sm-8 text-center">
-            <h1 class="title theme-color text-uppercase"><?php the_title() ?></h1>
-            <?php if($heading['subheading']): ?><h1><?php echo $heading['subheading'] ?></h1><?php endif; ?>
-            <?php if($heading['content']) { ?>
-            <p><?php echo $heading['content'] ?></p>
-            <?php }; ?>
-        </div>
-    </div>
-</section>
-
 <?php
 $sections = get_post_meta($post->ID, 'blanket_sections', true);
 
 if( !empty($sections[0]['image']) && !empty($sections[0]['heading']) && !empty($sections[0]['content']) && !empty($sections[0]['section_class']) ): ?>
-    <section class="<?php echo $sections[0]['section_class'] ? $sections[0]['section_class'] : 'stars' ?>" <?php if($sections[0]['section_class']=='stars'&& !empty($sections[0]['image'])) echo "style='background-image: url(".$sections[0]['image'].");'" ?>>
+    <section style="padding-top: 13em;" class="<?php echo $sections[0]['section_class'] ? $sections[0]['section_class'] : 'stars' ?>" <?php if($sections[0]['section_class']=='stars'&& !empty($sections[0]['image'])) echo "style='background-image: url(".$sections[0]['image'].");'" ?>>
         <div class="container"><?php
             foreach ($sections as $section) {
                 if($section['section_class'] == 'pricing'): ?>
@@ -100,6 +87,19 @@ if( !empty($sections[0]['image']) && !empty($sections[0]['heading']) && !empty($
         </div>
     </section><?php
 endif; ?>
+
+<?php $heading = get_post_meta($post->ID, 'blanket_heading', true); ?>
+<section class="programmes-banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)">
+    <div class="container">
+        <div class="col-sm-offset-2 col-sm-8 text-center">
+            <h1 class="title theme-color text-uppercase"><?php the_title() ?></h1>
+            <?php if($heading['subheading']): ?><h1><?php echo $heading['subheading'] ?></h1><?php endif; ?>
+            <?php if($heading['content']) { ?>
+            <p><?php echo $heading['content'] ?></p>
+            <?php }; ?>
+        </div>
+    </div>
+</section>
 
 <?php the_content() ?>
 
