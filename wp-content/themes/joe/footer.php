@@ -71,10 +71,10 @@ $blanket_options = get_option('blanket_theme_options'); ?>
         </div>
         <div class="row-bottom">
             <div class="container">
-                <div class="col-xs-6">
+                <div class="col-xs-8">
                     <p class="copyright pull-left"><?php the_copyright(); ?></p>
                 </div>
-                <div class="col-xs-6 pad-right-zero">
+                <div class="col-xs-4 pad-right-zero">
                     <ul class="list-inline social-icons pull-right">
                         <li>
                             <a target="_blank" href="<?php echo $blanket_options['social']['facebook'] ?>" class="btn">
