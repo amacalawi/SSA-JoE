@@ -1,20 +1,26 @@
             <section class="top-slider">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li>
-                            <div class="opening opening-animation">
-                                <div class="container">
-                                    <div class="col-sm-7">
-                                        <div class="caption">
+                <div class="opening opening-animation">
+                    <div class="container">
+                        <div class="col-sm-7">
+                            <div class="caption">
+                                <div class="flexslider">
+                                    <ul class="slides">
+                                        <li>
+                                            <h1 class="title text-uppercase">Who said <strong class="theme-color">Adults</strong> can only be <strong class="color-danger">Entrepreneur?</strong></h1>
+                                        </li>
+                                        <li>
+                                            <h1 class="title text-uppercase">Your <strong class="theme-color">Child</strong> has what it takes to be an <strong class="color-danger">Entrepreneur?</strong></h1>
+                                        </li>
+                                        <li>
                                             <h1 class="title text-uppercase">Pave his <strong class="theme-color">Journey of Entrepreneurship</strong> <strong class="color-danger">Now!</strong></h1>
                                             <p><a href="<?php echo bloginfo('url') ?>/enrol" class="btn btn-danger btn-lg text-uppercase">Register</a></p>
-                                        </div>
-                                    </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <iframe src="https://publish.animatron.io/5704b056c2d70452f8e2466a?w=1903&h=900&a=1&r=1&c=0" width="1903" height="900" frameborder="0"></iframe>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <iframe src="https://publish.animatron.io/5704b056c2d70452f8e2466a?w=1903&h=900&a=1&r=1&c=0" width="1903" height="900" frameborder="0"></iframe>
                 </div>
             </section>
 

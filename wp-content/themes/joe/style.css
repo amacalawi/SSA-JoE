@@ -921,7 +921,7 @@ section.programme-phase h1.title {
   font-weight: bold;
   color: #fff;
   font-size: 18px;
-  width: 100%;
+  /*width: 100%;*/
 }
 #programmes .bottom {
   background: url(images/programmes-banner-bottom.jpg);
@@ -1441,4 +1441,34 @@ img[src=""] {
   padding: 1em 2em;
   box-shadow: 0 0 2px 0 rgba(0,0,0,0.1);
   border-radius: 3px;
+}
+
+/*
+| ------------------------
+| # Modal
+| ------------------------
+*/
+.pricing-modal .modal-content {
+  padding: 0 !important;
+  padding-bottom: 20px !important;
+}
+.pricing-modal .modal-content .modal-header {
+  padding: 20px !important;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  padding: 20px;
+}
+
+/*
+| ------------
+| # List Group
+| ------------
+*/
+.programmes-banner .list-group-item:first-child {
+  min-height: 98px;
+}
+
+.flexslider {
+  background: transparent;
+  box-shadow: none;
 }
