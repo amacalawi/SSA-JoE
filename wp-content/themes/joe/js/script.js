@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
     | # Waypoint
     | -----------------------------------------
     */
-    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] .hides, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p, section.stars h1').addClass('opacitate');
+    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] .hides, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p').addClass('opacitate');
 
     $('body:not(#programmes) section .title').waypoint(function(direction) {
 

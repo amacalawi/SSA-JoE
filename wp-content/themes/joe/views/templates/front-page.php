@@ -1,6 +1,17 @@
+            <div class="opening opening-animation">
+                <div class="container">
+                    <div class="col-sm-7">
+                        <div class="caption">
+                            <h1 class="title text-uppercase">Pave his <strong class="theme-color">Journey of Entrepreneurship</strong> <strong class="color-danger">Now!</strong></h1>
+                            <p><button class="btn btn-danger btn-lg text-uppercase">Register</button></p>
+                        </div>
+                    </div>
+                </div>
+                <iframe src="https://publish.animatron.io/5704b056c2d70452f8e2466a?w=1903&h=900&a=1&r=1&c=0" width="1903" height="900" frameborder="0"></iframe>
+            </div>
             <?php
             $carousels = get_post_meta($post->ID, 'blanket_carousel', true); ?>
-            <section class="top-slider">
+            <!-- <section class="top-slider">
                 <div class="flexslider">
                     <ul class="slides"><?php
                         foreach ($carousels as $carousel) { ?>
@@ -17,7 +28,7 @@
                         } ?>
                     </ul>
                 </div>
-            </section>
+            </section> -->
 
             <section class="journey">
                 <div class="container"><?php
@@ -39,20 +50,8 @@
 
 
             <?php
-            $sections = get_post_meta($post->ID, 'blanket_sections', true);
-            foreach ($sections as $section) { ?>
-                <section class="<?php echo !empty($section['section_class'])?$section['section_class']:'stars' ?>">
-                    <div class="container">
-                        <div class="col-sm-offset-2 col-sm-8">
-                            <?php if($section['heading']): ?><h1 class="wcolor text-center"><?php echo $section['heading'] ?></h1><?php endif; ?>
-                            <?php if($section['content']): ?><p class="wcolor text-center"><?php echo do_shortcode( $section['content'] ) ?></p><?php endif; ?>
-                        </div>
-                    </div>
-                </section> <?php
-            } ?>
-
-            <?php
-            $parts =get_post_meta($post->ID, 'blanket_parts', true); ?>
+            $parts =get_post_meta($post->ID, 'blanket_parts', true);
+            if( isset($parts['part_class']) ): ?>
             <section class="<?php echo $parts[0]['part_class'] ? $parts[0]['part_class'] : 'student' ?>">
                 <div class="container">
                     <div class="col-sm-6">
@@ -64,8 +63,23 @@
                         <img class="pull-left" src="<?php echo $parts[1]['image'] ?>"/>
                     </div><div class="clearfix"></div>
                 </div>
-            </section>
+            </section><?php
+            endif; ?>
 
             <?php echo do_shortcode('[photogal id="81"]'); ?>
 
             <?php echo do_shortcode('[testimonials]') ?>
+
+
+            <?php
+            $sections = get_post_meta($post->ID, 'blanket_sections', true);
+            foreach ($sections as $section) { ?>
+                <section class="<?php echo !empty($section['section_class'])?$section['section_class']:'stars' ?>">
+                    <div class="container">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <?php if($section['heading']): ?><h1 class="wcolor text-center"><?php echo $section['heading'] ?></h1><?php endif; ?>
+                            <?php if($section['content']): ?><p class="wcolor text-center"><?php echo do_shortcode( $section['content'] ) ?></p><?php endif; ?>
+                        </div>
+                    </div>
+                </section> <?php
+            } ?>
