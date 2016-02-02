@@ -282,6 +282,7 @@ section.top-slider li .col-sm-6{
   section.top-slider,
   section.top-slider li {
     min-height: 768px;
+    max-height: 900px;
   }
   section.top-slider li .col-sm-6 {
     margin-top:300px;
@@ -314,11 +315,11 @@ section.top-slider li {
   width: 100%;
 }
 section.top-slider li:nth-child(1){
-  background: url(images/slide1.png) no-repeat;
+  /*background: url(images/slide1.png) no-repeat;*/
   background-size: cover;
 }
 section.top-slider li:nth-child(2){
-  background: url(images/slide2.png) no-repeat;
+  /*background: url(images/slide2.png) no-repeat;*/
   background-size: cover;
 }
 section.top-slider .flexslider {
@@ -910,7 +911,7 @@ section.programme-phase h1.title {
 }
 #programmes .content p {
   text-align: center;
-  padding: 15px 20px;
+  /*padding: 15px 20px;*/
   margin: 0;
   /*border-bottom: 1px solid #ddd;*/
 }

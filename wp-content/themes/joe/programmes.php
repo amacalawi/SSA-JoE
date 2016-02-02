@@ -14,48 +14,121 @@
             <div class="col-sm-4 sides">
                 <h2 class="title wolor">5-MONTH FAST TRACK</h2>
                 <img src="http://journey-of-entrepreneurship.com.sg/demo/wp-content/uploads/2016/01/envisioning.png"/>
-                <div class="content">
-                    <p class="first">
-                        Learn all about the entrepreneurship through experential learning.
-                    </p>
-                    <p>
-                        20 weeks
-                    </p>
-                    <p>
-                        2 hours/week
-                    </p>
-                    <p>
-                        No Meals included
-                    </p>
-                    <p>
-                        <button class="btn">
-                            See Pricing
-                        </button>
-                    </p>
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <p>Learn all about the entrepreneurship through experential learning.</p>
+                    </div>
+                    <div class="list-group-item">
+                        <p>20 weeks</p>
+                    </div>
+                    <div class="list-group-item">
+                        <p>2 hours/week</p>
+                    </div>
+                    <div class="list-group-item">
+                        <p>No Meals included</p>
+                    </div>
+                    <div class="list-group-item">
+                        <a class="btn btn-default btn-block" data-toggle="modal" href='#modal_<?php echo $random_num = rand(10, 200); ?>'>See Pricing</a>
+                    </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modal_<?php echo $random_num; ?>">
+                    <div class="modal-dialog pricing-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h3 class="text-uppercase">Pricing</h3>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Country</th>
+                                            <th class="text-center">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Singapore</td>
+                                            <td>SGD 200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Egypt</td>
+                                            <td>E£</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
             </div>
             <div class="col-sm-4 sides">
                 <h2 class="title wolor">1-WEEK HOLIDAY BOOTCAMP</h2>
                 <img src="http://journey-of-entrepreneurship.com.sg/demo/wp-content/uploads/2016/01/time-management.png"/>
-                <div class="content">
-                    <p class="first">
-                        Have loads of enthusiasm and energy to spare? Experience JoE over an intensive 5-day camp!
-                    </p>
-                    <p>
-                        5 days
-                    </p>
-                    <p>
-                        8 hours/day
-                    </p>
-                    <p>
-                        Meals included
-                    </p>
-                    <p>
-                        <button class="btn">
-                            See Pricing
-                        </button>
-                    </p>
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <p>Have loads of enthusiasm and energy to spare? Experience JoE over an intensive 5-day camp!</p>
+                    </div>
+                    <div class="list-group-item">
+                        <p>5 days</p>
+                    </div>
+                    <div class="list-group-item">
+                        <p>8 hours/day</p>
+                    </div>
+                    <div class="list-group-item">
+                        <p>Meals included</p>
+                    </div>
+
+                    <div class="list-group-item">
+                        <a class="btn btn-default btn-block" data-toggle="modal" href='#modal_<?php echo $random_num = rand(10, 200); ?>'>See Pricing</a>
+                    </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modal_<?php echo $random_num; ?>">
+                    <div class="modal-dialog pricing-modal">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h2 class="modal-title text-uppercase">Pricing</h2>
+                            </div>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Country</th>
+                                        <th class="text-center">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $count=1;
+                                    foreach ($list_i as $key => $value) {
+                                        if( $value != 'price' )
+                                        {
+                                            if ($count%2 == 1)
+                                            {
+                                                echo "<tr>";
+                                            } ?>
+                                                <td><?php echo $value; ?></td><?php
+                                            if ($count%2 == 0)
+                                            {
+                                                echo "</tr>";
+                                            }
+                                            $count++;
+                                        }
+                                    }
+                                    if($count%2 != 1) echo "</tr>"; ?>
+                                </tbody>
+                            </table>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
             </div>
             <div class="col-sm-4 sides">
                 <h2 class="title wolor">10-MONTH THOROUGH TRACK</h2>
