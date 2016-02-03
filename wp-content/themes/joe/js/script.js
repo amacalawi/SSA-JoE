@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
 
     $('[name=country]').on('change', function () {
         var Singapore = ['Paya Lebar'];
-        var Cairo = ['Sixth October City'];
+        var Cairo = ["Sixth October City", "Maadi", "Heliopolis", "Mohandseen", "Tagamoa"];
 
         if( $(this).val() == 'Singapore, Singapore' )
         {
