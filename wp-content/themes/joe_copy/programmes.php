@@ -2,15 +2,17 @@
 <section class="programmes-banner">
 <!--style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) ?>)"-->
     <div class="container">
-        <div class="col-sm-offset-2 col-sm-8 text-center">
-            <h1 class="title theme-color text-uppercase"><?php the_title() ?></h1>
-            <?php if($heading['subheading']): ?><h1><?php echo $heading['subheading'] ?></h1><?php endif; ?>
-            <?php if($heading['content']) { ?>
-            <p><?php echo $heading['content'] ?></p>
-            <?php }; ?>
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 text-center">
+                <h1 class="title theme-color text-uppercase"><?php the_title() ?></h1>
+                <?php if($heading['subheading']): ?><h1><?php echo $heading['subheading'] ?></h1><?php endif; ?>
+                <?php if($heading['content']) { ?>
+                <p><?php echo $heading['content'] ?></p>
+                <?php }; ?>
+            </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row"> -->
             <div class="col-sm-4 sides">
                 <h2 class="title wolor">5-MONTH FAST TRACK</h2>
                 <img src="<?php echo BLANKET_URI . 'images/pg-s1.jpg' ?>"/>
@@ -175,7 +177,7 @@
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 
     <div class="bottom">

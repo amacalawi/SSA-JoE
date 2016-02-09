@@ -71,27 +71,29 @@ $blanket_options = get_option('blanket_theme_options'); ?>
         </div>
         <div class="row-bottom">
             <div class="container">
-                <div class="col-xs-8">
-                    <p class="copyright pull-left"><?php the_copyright(); ?></p>
-                </div>
-                <div class="col-xs-4 pad-right-zero">
-                    <ul class="list-inline social-icons pull-right">
-                        <li>
-                            <a target="_blank" href="<?php echo $blanket_options['social']['facebook'] ?>" class="btn">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="<?php echo $blanket_options['social']['twitter'] ?>" class="btn">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="<?php echo $blanket_options['social']['linkedin'] ?>" class="btn">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <p class="copyright pull-left"><?php the_copyright(); ?></p>
+                    </div>
+                    <div class="col-xs-4 pad-right-zero">
+                        <ul class="list-inline social-icons pull-right">
+                            <li>
+                                <a target="_blank" href="<?php echo $blanket_options['social']['facebook'] ?>" class="btn">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="<?php echo $blanket_options['social']['twitter'] ?>" class="btn">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="<?php echo $blanket_options['social']['linkedin'] ?>" class="btn">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
