@@ -6,10 +6,10 @@
                                 <div class="flexslider">
                                     <ul class="slides">
                                         <li>
-                                            <h1 class="title text-uppercase">Who said <strong class="theme-color">Adults</strong> can only be <strong class="color-danger">Entrepreneur?</strong></h1>
+                                            <h1 class="title text-uppercase">Who said only <strong class="theme-color">Adults</strong> can be <strong class="color-danger">Entrepreneurs?</strong></h1>
                                         </li>
                                         <li>
-                                            <h1 class="title text-uppercase">Your <strong class="theme-color">Child</strong> has what it takes to be an <strong class="color-danger">Entrepreneur?</strong></h1>
+                                            <h1 class="title text-uppercase">Does your <strong class="theme-color">Child</strong> has what it takes to be an <strong class="color-danger">Entrepreneur?</strong></h1>
                                         </li>
                                         <li>
                                             <h1 class="title text-uppercase">Pave his <strong class="theme-color">Journey of Entrepreneurship</strong> <strong class="color-danger">Now!</strong></h1>
@@ -20,7 +20,8 @@
                             </div>
                         </div>
                     </div>
-                    <iframe src="https://publish.animatron.io/5704b056c2d70452f8e2466a?w=1903&h=900&a=1&r=1&c=0" width="1903" height="900" frameborder="0"></iframe>
+                    <div id="target"></div>
+                    <!-- <iframe src="https://publish.animatron.io/5704b056c2d70452f8e2466a?w=1903&h=900&a=1&r=1&c=0" width="1903" height="900" frameborder="0"></iframe> -->
                 </div>
             </section>
 
