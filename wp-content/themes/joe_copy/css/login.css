@@ -1,0 +1,19 @@
+body.login {
+    background: #f3f5f1;
+}
+#login h1>a {
+    display: block;
+    width: 100%;
+    background-image: url("../assets/logos/main.png");
+    -webkit-background-size: 150px;
+    background-size: 150px;
+    height: 95px;
+}
+#loginform {
+    /*background-color: transparent;*/
+    box-shadow: 0 6px 0 -3px rgba(0,0,0,0.3);
+}
+#loginform label {
+    display: block;
+    font-size: 1.125rem;
+}

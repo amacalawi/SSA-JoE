@@ -98,5 +98,15 @@ $blanket_options = get_option('blanket_theme_options'); ?>
     </footer><?php
     wp_footer() ?>
 
+    <?php
+    if( is_front_page() )
+    { ?>
+        <script src="<?php echo BLANKET_VENDORS_URI . 'animatron/player.js' ?>"></script>
+        <script src="<?php echo BLANKET_VENDORS_URI . 'animatron/main.js' ?>"></script>
+         <?php
+
+    }
+     ?>
+
 </body>
 </html>

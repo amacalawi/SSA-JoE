@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
     | # Waypoint
     | -----------------------------------------
     */
-    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] .hides, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p, section.stars h1').addClass('opacitate');
+    $('body:not(#programmes) section[class*="phase"] img, body:not(#programmes) section[class*="phase"] .hides, body:not(#programmes) section[class*="phase"] h1, body:not(#programmes) section[class*="phase"] p').addClass('opacitate');
 
     $('body:not(#programmes) section .title').waypoint(function(direction) {
 
@@ -33,17 +33,54 @@ jQuery(document).ready(function ($) {
         offset: '50%'
     });
 
+    /*
+    | ----------------
+    | # Datetimepicker
+    | ----------------
+    */
+    $('.datepicker').datetimepicker({
+        format: 'MM/DD/YYYY'
+    });
+    $('.timepicker').datetimepicker({
+        format: 'HH:mm'
+    });
+
+    $('[name=country]').on('change', function () {
+        var Singapore = ['Paya Lebar'];
+        var Cairo = ["Sixth October City", "Maadi", "Heliopolis", "Mohandseen", "Tagamoa"];
+
+        if( $(this).val() == 'Singapore, Singapore' )
+        {
+            $('[name=centre]').html('');
+            for (var i = 0; i < Singapore.length; i++) {
+                $('[name=centre]').append("<option value='"+Singapore[i]+"'>"+Singapore[i]+"</option>");
+            };
+        }
+        else
+        {
+            $('[name=centre]').html('');
+            for (var i = 0; i < Cairo.length; i++) {
+                $('[name=centre]').append("<option value='"+Cairo[i]+"'>"+Cairo[i]+"</option>");
+            };
+        }
+
+        $('[name=centre]').selectpicker('refresh');
+
+    });
 
     /*
     | -------------------------------
     | # Selectpicker
     | -------------------------------
     */
-    $('.selectpicker').selectpicker();
+    $('.selectpicker').selectpicker({
+        width: '100%'
+    });
 
     $(window).load(function(){
         $('.flexslider').flexslider({
             animation: "fade",
+            slideshowSpeed: '2000',
             start: function(slider){
                 $('body').removeClass('loading');
             }

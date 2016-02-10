@@ -282,6 +282,7 @@ section.top-slider li .col-sm-6{
   section.top-slider,
   section.top-slider li {
     min-height: 768px;
+    max-height: 900px;
   }
   section.top-slider li .col-sm-6 {
     margin-top:300px;
@@ -314,11 +315,11 @@ section.top-slider li {
   width: 100%;
 }
 section.top-slider li:nth-child(1){
-  background: url(images/slide1.png) no-repeat;
+  /*background: url(images/slide1.png) no-repeat;*/
   background-size: cover;
 }
 section.top-slider li:nth-child(2){
-  background: url(images/slide2.png) no-repeat;
+  /*background: url(images/slide2.png) no-repeat;*/
   background-size: cover;
 }
 section.top-slider .flexslider {
@@ -779,7 +780,7 @@ section.about-banner h2{
 section.about-banner {
   width: 100%;
   background: url(images/about.jpg) no-repeat;
-  background-size: 80% 100%;
+  background-size: cover;
   background-color: #d7ecf3;
   background-position: left center;
 }
@@ -901,18 +902,18 @@ section.programme-phase h1.title {
 #programmes .sides img {
   width: 100%;
 }
-#programmes .content { 
+#programmes .content {
   background: #fff;
 }
 #programmes .content p.first {
   min-height: 107px;
   border-top: 1px solid rgba(0,0,0,0.1);
 }
-#programmes .content p {  
+#programmes .content p {
   text-align: center;
-  padding: 15px 20px;
+  /*padding: 15px 20px;*/
   margin: 0;
-  border-bottom: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;*/
 }
 #programmes .content .btn {
   background: #ffbf3d;
@@ -920,7 +921,7 @@ section.programme-phase h1.title {
   font-weight: bold;
   color: #fff;
   font-size: 18px;
-  width: 100%;
+  /*width: 100%;*/
 }
 #programmes .bottom {
   background: url(images/programmes-banner-bottom.jpg);
@@ -1309,8 +1310,165 @@ section.privacy-policy-banner .title {
 }
 .card .panel-body .list-group .list-group-item:first-child {
   border-top: none;
+  min-height: 97px;
 }
 .card .panel-body .list-group .list-group-item {
   border-left: none;
   border-right: none;
+}
+
+/*
+| -------------
+| # Tab Content
+| -------------
+*/
+.tab-content .tab-pane .clearfix {
+  margin-bottom: 35px;
+}
+
+img[src=""] {
+  display: none;
+}
+
+/*
+| -------------------------
+| # Experience Page Navtabs
+| -------------------------
+*/
+#experience .nav-tabs>li.active>a,
+#experience .nav-tabs>li.active>a:focus,
+#experience .nav-tabs>li.active>a:hover {
+  background: #5d095d;
+  border: 1px solid #5d095d;
+  border-radius: 15px;
+  transition: .1s all ease-in-out;
+}
+#experience .nav-tabs>li>a {
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 30px;
+  transition: .2s all ease-in-out;
+  margin-right: 0;
+}
+#experience .nav-tabs>li>a:hover {
+  background: transparent;
+  border: 1px solid transparent;
+}
+#experience .nav-tabs {
+  border: 1px solid transparent;
+  background: #823c82;
+  display: inline-block;
+  border-radius: 15px;
+}
+#experience .tab-content .col-sm-4 {
+  margin-top: 40px;
+}
+#experience .tab-content .col-sm-4 ul {
+  padding-left: 20px;
+  text-align: left;
+}
+#experience .tab-content .col-sm-4 .btn {
+  padding: 8px 30px;
+  width: 70%;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  border-radius: 20px;
+  background: #f9c126;
+  border: 1px solid #f9c126;
+}
+/*
+| ------------------------
+| # Selectpicker Overrides
+| ------------------------
+*/
+.selectpicker+.bootstrap-select .btn-default {
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+.selectpicker+.bootstrap-select .btn-default,
+.selectpicker+.bootstrap-select .btn-default span {
+  color: rgba(0,0,0,0.3);
+}
+.selectpicker.selectpicker-lg+.bootstrap-select .btn-default {
+  height: 46px;
+  padding: 10px 16px;
+  line-height: 1.3333333;
+}
+.wpcf7-form-control-wrap.dateofbirth {
+  display: block;
+}
+
+.registration-section {
+  padding-top: 180px;
+}
+.registration-section div.wpcf7-validation-errors *, .registration-section span.wpcf7-not-valid-tip {
+  color: #800080;
+}
+.registration-section .registration-header {
+  margin-bottom: 2em;
+}
+.registration-section .wpcf7-response-output.wpcf7-mail-sent-ok {
+  padding: 20px;
+  color: #800080;
+}
+
+/*
+| -------------------
+| # Opening Animation
+| -------------------
+*/
+.opening {
+  position: relative;
+  overflow: hidden;
+}
+.opening .caption {
+  position: absolute;
+  margin-top: 210px;
+}
+.opening-animation .caption h1 {
+  font-size: 5rem;
+}
+.color-danger {
+  color: #d50100;
+}
+.btn-danger {
+  background-color: #d50100;
+  font-size: 3rem;
+}
+.registration-container {
+  padding: 1em 2em;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+/*
+| ------------------------
+| # Modal
+| ------------------------
+*/
+.pricing-modal .modal-content {
+  padding: 0 !important;
+  padding-bottom: 20px !important;
+}
+.pricing-modal .modal-content .modal-header {
+  padding: 20px !important;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  padding: 20px;
+}
+
+/*
+| ------------
+| # List Group
+| ------------
+*/
+.programmes-banner .list-group-item:first-child {
+  min-height: 98px;
+}
+
+.flexslider {
+  background: transparent;
+  box-shadow: none;
 }

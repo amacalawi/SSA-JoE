@@ -1,0 +1,1 @@
+<a class="navbar-brand" href="<?php bloginfo('url') ?>"><img src="<?php echo BLANKET_ASSETS_URI . 'logos/main.png' ?>" alt="<?php bloginfo('name') ?>"></a>
