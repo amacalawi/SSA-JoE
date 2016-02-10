@@ -1980,3 +1980,8 @@ body.no-iframe .anm-wrapper {
 .preloader > .preloader-inner .navbar-brand img {
   display: inline-block;
 }
+
+body.no-iframe .anm-wrapper {
+  top: 0;
+  margin-top: 0 !important;
+}
