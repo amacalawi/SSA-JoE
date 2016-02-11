@@ -577,7 +577,7 @@ section.top-slider li .col-sm-6{
   section.top-slider,
   section.top-slider li {
     min-height: 768px;
-    max-height: 900px;
+    /*max-height: 900px;*/
   }
   section.top-slider li .col-sm-6 {
     margin-top:300px;
