@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="target_box" style="height: 900px">
+                    <div class="layer">
                         <div id="target"></div>
                     </div>
                     <!--iframe src="https://publish.animatron.io/5704b056c2d70452f8e2466a?w=1903&h=900&a=1&r=1&c=0" width="1903" height="900" frameborder="0"></iframe-->
