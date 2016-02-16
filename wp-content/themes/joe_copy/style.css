@@ -1051,8 +1051,9 @@ section.phase4 h1.title {
 }
 
 .experience-cards .card {
-  width: 183px;
-  height: 235px;
+  width: 173px;
+  height: 210px;
+  overflow: hidden;
 }
 .experience-cards .card:first-child {
   background-color: transparent;
@@ -1074,8 +1075,13 @@ section.phase4 h1.title {
   position: relative;
 }
 .experience-cards .card .card-block:first-child {
-  margin-top: 52px;
-  height: 77px;
+  margin-top: 54px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  height: 70px;
+}
+.experience-cards .card .card-block:nth-child(2) {
+  padding: 0 5px 10px;
 }
 .experience-cards .card .card-block img {
   margin-bottom: 10px;
@@ -1087,9 +1093,14 @@ section.phase4 h1.title {
 }
 .experience-cards .card .card-block p {
   margin-bottom: 10px;
+  font-size: 17px;
 }
 .experience-cards .card .card-block small {
   font-size: 1.2em;
+}
+.experience-cards .card .card-img {
+  width: 35px;
+  height: auto;
 }
 /* experience section css end */
 
@@ -1097,6 +1108,9 @@ section.phase4 h1.title {
 /* about section css start */
 section.about-banner h2{
     margin-top: -10px;
+}
+.margin-top-50 {
+  margin-top: 50px;
 }
 .margin-top-100 {
   margin-top: 100px;
