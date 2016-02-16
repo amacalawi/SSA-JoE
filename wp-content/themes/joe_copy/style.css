@@ -1144,9 +1144,17 @@ section.paint-section {
   background-color: #ffffff;
   min-height: 600px;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: 1000px 550px;
+  background-size: 1000px 550px;
   background-position: right bottom;
+}
+@media only screen and (max-width: 767px) {
+  section.paint-section {
+    min-height: 120vh;
+  }
+  section.paint-section .margin-top-200 {
+    margin-top: 0 !important;
+  }
 }
 section.paint-section .main-bg {
   width: auto;

@@ -6,14 +6,26 @@
                                 <div class="flexslider">
                                     <ul class="slides">
                                         <li>
-                                            <h1 class="title text-uppercase">Who said only <strong class="theme-color">Adults</strong> can be <strong class="color-danger">Entrepreneurs?</strong></h1>
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <h1 class="title text-uppercase">Who said only <strong class="theme-color">Adults</strong> can be<br><strong class="color-danger">Entrepreneurs?</strong></h1>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h1 class="title text-uppercase">Does your <strong class="theme-color">Child</strong> have what it takes to be an <strong class="color-danger">Entrepreneur?</strong></h1>
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <h1 class="title text-uppercase">Does your <strong class="theme-color">Child</strong> have what it takes<br>to be an <strong class="color-danger">Entrepreneur?</strong></h1>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h1 class="title text-uppercase">Pave his <br><strong class="theme-color">Journey of Entrepreneurship</strong><br> <strong class="color-danger">Now!</strong></h1>
-                                            <p><a href="<?php echo bloginfo('url') ?>/enrol" class="btn btn-danger btn-lg text-uppercase">Register</a></p>
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <h1 class="title text-uppercase">Pave his <br><strong class="theme-color">Journey of Entrepreneurship</strong><br> <strong class="color-danger">Now!</strong></h1>
+                                                    <p><a href="<?php echo bloginfo('url') ?>/enrol" class="btn btn-danger btn-lg text-uppercase">Register</a></p>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
