@@ -38,12 +38,14 @@ $heading = get_post_meta($post->ID, 'blanket_heading', true); ?>
 
 <section class="paint-section" style="background-image: url(<?php echo BLANKET_URI . 'images/about-image-V2.jpg' ?>)">
     <div class="container">
-        <div class="col-sm-4">
-            <h2 class="theme-color">Entreprenuerial Qualities</h2>
-            <p>are already present in every individual and can be developed further through education. JoE serves to realise this belief.</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2 class="theme-color">Entreprenuerial Qualities</h2>
+                <p>are already present in every individual and can be developed further through education. JoE serves to realise this belief.</p>
+            </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-sm-offset-4 margin-top-200">
+            <div class="col-sm-6 margin-top-200">
                 <h2 class="theme-color">At the Age of 9 to 12</h2>
                 <p>children's personalities are known to be malleable. With education, children can develop their personality traits and acquire entrepreneurial skills.</p>
             </div>

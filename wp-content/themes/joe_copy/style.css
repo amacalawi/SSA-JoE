@@ -577,7 +577,7 @@ section.top-slider li .col-sm-6{
   section.top-slider,
   section.top-slider li {
     min-height: 768px;
-    max-height: 900px;
+    /*max-height: 900px;*/
   }
   section.top-slider li .col-sm-6 {
     margin-top:300px;
@@ -1051,8 +1051,9 @@ section.phase4 h1.title {
 }
 
 .experience-cards .card {
-  width: 183px;
-  height: 235px;
+  width: 173px;
+  height: 210px;
+  overflow: hidden;
 }
 .experience-cards .card:first-child {
   background-color: transparent;
@@ -1074,8 +1075,13 @@ section.phase4 h1.title {
   position: relative;
 }
 .experience-cards .card .card-block:first-child {
-  margin-top: 52px;
-  height: 77px;
+  margin-top: 54px;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  height: 70px;
+}
+.experience-cards .card .card-block:nth-child(2) {
+  padding: 0 5px 10px;
 }
 .experience-cards .card .card-block img {
   margin-bottom: 10px;
@@ -1087,9 +1093,14 @@ section.phase4 h1.title {
 }
 .experience-cards .card .card-block p {
   margin-bottom: 10px;
+  font-size: 17px;
 }
 .experience-cards .card .card-block small {
   font-size: 1.2em;
+}
+.experience-cards .card .card-img {
+  width: 35px;
+  height: auto;
 }
 /* experience section css end */
 
@@ -1097,6 +1108,9 @@ section.phase4 h1.title {
 /* about section css start */
 section.about-banner h2{
     margin-top: -10px;
+}
+.margin-top-50 {
+  margin-top: 50px;
 }
 .margin-top-100 {
   margin-top: 100px;
@@ -1144,9 +1158,17 @@ section.paint-section {
   background-color: #ffffff;
   min-height: 600px;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: 1000px 550px;
+  background-size: 1000px 550px;
   background-position: right bottom;
+}
+@media only screen and (max-width: 767px) {
+  section.paint-section {
+    min-height: 120vh;
+  }
+  section.paint-section .margin-top-200 {
+    margin-top: 0 !important;
+  }
 }
 section.paint-section .main-bg {
   width: auto;
@@ -1983,31 +2005,71 @@ body.no-iframe .anm-wrapper {
 
 body.no-iframe .anm-wrapper {
   top: 0;
-  margin-top: 0 !important;
+  /*margin-top: 0 !important;*/
 }
 
-.layer{
+/*.layer{
   position: relative;
-  /*overflow: hidden;*/
   height: 100vh;
   width: 100%;
 }
 .layer #target {
-  /*position: fixed;*/
-  /*overflow: hidden;*/
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: -100;
 }
-/*#levels .content{
- padding: 60px 0;
-}*/
 body.no-iframe .anm-wrapper {
  position: absolute;
  top: 50%;
  left: 50%;
  width: 100%;
  height: 100%;
+}*/
+
+.layer, #layer{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+#target {
+  position: fixed;
+  overflow: hidden;
+  /*top: 0;
+  right: 0;
+  bottom: 0;*/
+  left: 0 !important;
+  z-index: -300;
+  /*width: 100% !important;*/
+  /*margin-top: 0 !important;*/
+  margin-left: 0 !important;
+  height: 100vh;
+}
+
+body.no-iframe .anm-wrapper {
+  /*position: fixed;*/
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+}
+body.no-iframe .anm-wrapper canvas {
+  width: 100%;
+  height: 100vh;
+}
+@media only screen and (max-width: 768px) {
+  body.no-iframe .anm-wrapper canvas {
+    width: 100%;
+    height: 100vh !important;
+  }
+}
+
+#home>header.navbar-fixed-top {
+  /*background-color: #ffffff;*/
 }

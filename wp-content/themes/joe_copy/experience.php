@@ -64,7 +64,7 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-12 wcolor margin-top-100">
+                <div class="col-sm-12 wcolor margin-top-50">
                     <p class="text-center">In JoE, we believe that entreprenuership is not just about financial literacy. If it was that simple, then why do 99% of busienss ventures fail? There's so much more to that! Which is why JoE includes soft skills such as creativity, problem solving and innovative thinking.</p>
                 </div>
             </div>
