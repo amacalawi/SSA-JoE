@@ -21,9 +21,9 @@
                                         </li>
                                         <li>
                                             <div class="row">
-                                                <div class="col-sm-10">
+                                                <div class="col-sm-12">
                                                     <h1 class="title text-uppercase">Pave his <br><strong class="theme-color">Journey of Entrepreneurship</strong><br> <strong class="color-danger">Now!</strong></h1>
-                                                    <p><a href="<?php echo bloginfo('url') ?>/enrol" class="btn btn-danger btn-lg text-uppercase">Register</a></p>
+                                                    <p><a href="http://joe.dev/enrol" class="btn btn-danger btn-lg text-uppercase">Register</a></p>
                                                 </div>
                                             </div>
                                         </li>
